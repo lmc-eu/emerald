@@ -1,6 +1,6 @@
 {
   "name": "emerald",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Emerald is a responsive grid system written in LESS",
     "keywords": [
     "css",
@@ -8,6 +8,7 @@
     "less"
   ],
   "author": "Robin Pokorný <robin@medvedi.eu>",
+  "title": "Emerald",
   "repository": {
     "type": "git",
     "url": "git://github.com/robinpokorny/emerald.git"
