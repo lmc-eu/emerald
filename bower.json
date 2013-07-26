@@ -1,0 +1,10 @@
+{
+  "name": "Emerald",
+  "version": "0.0.1",
+  "main": "css/emerald.css",
+  "ignore": [
+    "*.js",
+    "*.json",
+    "node_modules"
+  ]
+}
