@@ -2,24 +2,45 @@
  *  Emerald
  */
 
+//
+// Variables
+//
+
+// Viewport breakpoints
 @screen-lap: 768px;
 @screen-desk: 1020px;
 @screen-uhd: 1400px;
 
+// Single column width
 @column-width-palm: 20px;
 @column-width-lap: 20px;
 @column-width-desk: 20px;
 @column-width-uhd: 25px;
 
+// Width of the gutter between columns
 @gutter-width-palm: 20px;
 @gutter-width-lap: 20px;
 @gutter-width-desk: 20px;
 @gutter-width-uhd: 25px;
 
+// Number of grid sizes to generate
+// Note: does not affect the total number of columns possible to have on a row!
+//       Think of it as a number of columns the widest element would occupy.
+//       To be save use a variant of:
+//       @columns-count-lap:
+//           unit(
+//               floor(
+//                   @screen-lap / (@column-width-lap + @gutter-width-lap)
+//               ),
+//               ~"" // Ge rid of units
+//           );
 @columns-count-palm: 16;
 @columns-count-lap: 16;
 @columns-count-desk: 16;
 @columns-count-uhd: 16;
+
+// Option to generate the grid changing uhd
+@generate-uhd: false;
 
 .grid {
     list-style: none;
@@ -85,27 +106,32 @@ body {
                     ~"--desk");
 }
 
-@media only screen and (min-width: @screen-uhd) {
-    body {
-        width: 1225px;
-    }
-    .grid {
-        margin-left: -@gutter-width-uhd;
-        &__item {
-            padding-left: @gutter-width-uhd;
-        }
-    }
 
-    .createColumns (@columns-count-lap,
-                    @column-width-uhd,
-                    @gutter-width-uhd,
-                    ~"");
-    .createColumns (@columns-count-desk,
-                    @column-width-uhd,
-                    @gutter-width-uhd,
-                    ~"--desk");
-    .createColumns (@columns-count-uhd,
-                    @column-width-uhd,
-                    @gutter-width-uhd,
-                    ~"--uhd");
+.uhd() when (@generate-uhd) {
+    @media only screen and (min-width: @screen-uhd) {
+        body {
+            width: 1225px;
+        }
+        .grid {
+            margin-left: -@gutter-width-uhd;
+            &__item {
+                padding-left: @gutter-width-uhd;
+            }
+        }
+
+        .createColumns (@columns-count-lap,
+                        @column-width-uhd,
+                        @gutter-width-uhd,
+                        ~"");
+        .createColumns (@columns-count-desk,
+                        @column-width-uhd,
+                        @gutter-width-uhd,
+                        ~"--desk");
+        .createColumns (@columns-count-uhd,
+                        @column-width-uhd,
+                        @gutter-width-uhd,
+                        ~"--uhd");
+    }
 }
+
+.uhd();

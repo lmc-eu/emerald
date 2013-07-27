@@ -14,8 +14,13 @@ module.exports = function(grunt) {
     // Task configuration.
     less: {
         dist: {
+            options: {
+                compress: true,
+                report: 'gzip'
+            },
             files: {
-                "css/emerald.css": "less/emerald.less"
+                'css/emerald.css': 'less/emerald.less',
+                'css/exp.css': 'less/exp.less'
             }
         }
     }
