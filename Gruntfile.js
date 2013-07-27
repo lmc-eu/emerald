@@ -19,8 +19,7 @@ module.exports = function(grunt) {
                 report: 'gzip'
             },
             files: {
-                'css/emerald.css': 'less/emerald.less',
-                'css/exp.css': 'less/exp.less'
+                'css/emerald.css': 'less/emerald.less'
             }
         }
     }
