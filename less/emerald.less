@@ -2,74 +2,14 @@
  *  Emerald
  */
 
-//
-// Variables
-//
-
-// Viewport breakpoints
-@screen-lap: 768px;
-@screen-desk: 1020px;
-@screen-uhd: 1400px;
-
-// Single column width
-@column-width-palm: 20px;
-@column-width-lap: 20px;
-@column-width-desk: 20px;
-@column-width-uhd: 25px;
-
-// Width of the gutter between columns
-@gutter-width-palm: 20px;
-@gutter-width-lap: 20px;
-@gutter-width-desk: 20px;
-@gutter-width-uhd: 25px;
-
-// Number of grid sizes to generate
-// Note: does not affect the total number of columns possible to have on a row!
-//       Think of it as a number of columns the widest element would occupy.
-//       To be save use a variant of:
-//       @columns-count-lap:
-//           unit(
-//               floor(
-//                   @screen-lap / (@column-width-lap + @gutter-width-lap)
-//               ),
-//               ~"" // Ge rid of units
-//           );
-@columns-count-palm: 16;
-@columns-count-lap: 16;
-@columns-count-desk: 16;
-@columns-count-uhd: 16;
-
-// Option to generate the grid changing uhd
-@generate-uhd: false;
+@import "variables.less";
+@import "columns.less";
+@import "grid.less";
 
 .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: -@gutter-width-palm;
+    .createGrid(@gutter-width-palm);
     &__item {
-        display: inline-block;
-        padding-left: @gutter-width-palm;
-        vertical-align: top;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-}
-
-.createColumns (@index, @column-width, @gutter-width, @modifier) when (@index > 0) {
-
-	.e-@{index}@{modifier} {
-		width: ((@index * @column-width) + (@index * @gutter-width));
-	}
-
-	.createColumns(@index - 1, @column-width, @gutter-width, @modifier);
-}
-
-.createColumns (0, @column-width , @gutter-width, @modifier) {
-    .e-full@{modifier} {
-        width: 100%;
+        .createGridItem(@gutter-width-palm);
     }
 }
 
@@ -113,9 +53,9 @@ body {
             width: 1225px;
         }
         .grid {
-            margin-left: -@gutter-width-uhd;
+            .createGrid(@gutter-width-uhd);
             &__item {
-                padding-left: @gutter-width-uhd;
+                .createGridItem(@gutter-width-uhd);
             }
         }
 
