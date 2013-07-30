@@ -21,9 +21,11 @@ In compliance with [SemVer](http://semver.org/), `v0.x.y` is for initial develop
 Expect more generalization and documentation in `v1.0.0`.
 
 ## How to use
-It is advised to include the LESS files in your project and compile it with your build script.
+Install via *Bower*
 
-If you need (or really want) the CSS use the one in the `css/` folder or build it with `$ grunt`.
+`$ bower install emerald`
+
+Either include source *LESS* files into your project (recommended) or use compiled minified *CSS*.
 
 ## Browser support
 

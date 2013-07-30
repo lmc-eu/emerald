@@ -1,8 +1,13 @@
 {
   "name": "emerald",
-  "version": "0.1.0",
-  "main": "css/emerald.css",
-  "ignore": [
-    "node_modules"
+  "version": "0.1.1",
+  "main": [
+    "css/emerald.css",
+    "css/emerald.min.css",
+    "less/emerald.less",
+    "less/variables.less",
+    "less/grid.less",
+    "less/columns.less",
+    "less/responsive-visibility.less"
   ]
 }
