@@ -1,71 +1,126 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Emerald by lmc-eu</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Emerald</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Emerald</h1>
-        <p>Emerald is a responsive grid system written in LESS</p>
+        <link rel="stylesheet" href="css/emerald.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/docs.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    </head>
+    <body>
+        <div class="wrapper header e-16 e-25--desk">
+            <div class="grid grid--center--palm">
+                <div class="grid__item e-3--palm e-5 e-6--desk">
+                    <div class="diamond1">
+                        <div class="diamond2">
+                            <div class="diamond3">
+                                <div class="diamond4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glitter">
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <h1>Emerald</h1>
+                <p class="hero">Emerald is a responsive grid system written in LESS</p>
+            </div>
+        </div>
 
-        <p class="view"><a href="https://github.com/lmc-eu/emerald">View the Project on GitHub <small>lmc-eu/emerald</small></a></p>
+        <div class="actionbar">
+            <div class="wrapper actionbar__wrapper">
+                <div class="grid grid--center">
+                    <div class="grid__item e-4">
+                        <a href="https://github.com/lmc-eu/emerald" class="button">View on GitHub</a>
+                    </div><!--
+                    --><div class="grid__item e-4">
+                        <a href="https://github.com/lmc-eu/emerald/archive/master.zip" class="button">Download</a>
+                    </div><!--
+                    --><div class="grid__item e-4">
+                        <a href="http://twitter.com/intent/tweet?url=http://lmc-eu.github.io/emerald/&amp;text=Emerald - a responsive grid system written in LESS&amp;via=lmc_eu&amp;related=yarrcat" target="_blank" class="button">Tweet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="wrapper e-16 e-25--desk">
+            <div class="grid">
+                <div class="grid__item">
+                    <h2>Example</h2>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper e-16 e-25--desk">
+            <div class="grid">
+                <div class="grid__item">
+                    <div class="demo">
+                       <strong>A</strong> Full width
+                    </div>
+                </div><!--
+                --><div class="grid__item e-16">
+                    <div class="grid">
+                        <div class="grid__item e-8">
+                            <div class="demo">
+                                <strong>C.A</strong> .e-8
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-8">
+                            <div class="demo">
+                                <strong>C.B</strong> .e-8
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-16">
+                            <div class="demo">
+                                <strong>C.C</strong> .e-16
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-4 e-6--desk">
+                            <div class="demo">
+                                <strong>C.D</strong> .e-4 .e-6--desk
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-8 e-4--desk">
+                            <div class="demo">
+                                <strong>C.E</strong> .e-8 .e-4--desk
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-4 e-6--desk">
+                            <div class="demo">
+                                <strong>C.F</strong> .e-4 .e-6--desk
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item e-7--desk e-push-2--desk">
+                    <div class="demo">
+                        <strong>D</strong> .e-7--desk .e-push-2--desk
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="demo">
+                       <strong>E</strong> Full width
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <ul>
-          <li><a href="https://github.com/lmc-eu/emerald/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/lmc-eu/emerald/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/lmc-eu/emerald">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/lmc-eu">lmc-eu</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        <div class="wrapper footer e-16 e-25--desk">
+            <div class="grid">
+                <div class="grid__item e-10 e-16--desk">
+                    <span class="footer__title">Emerald</span>
+                    <p class="footer__p">Designed and hand coded by <a href="https://twitter.com/robinpokorny">@robinpokorny</a> at <a href="https://github.com/lmc-eu">LMC</a>.</p>
+                    <p class="footer__p">Licenced under <a href="https://github.com/lmc-eu/emerald/blob/master/LICENSE">MIT</a> licence. View the <a href="https://github.com/lmc-eu/emerald#readme">README</a> file.</p>
+                </div><!--
+                --><div class="grid__item e-4 e-4--desk e-push-2 e-push-5--desk">
+                    <a href="http://www.lmc.eu/" class="footer__logo hidden--palm" title="LMC s.r.o."><img src="images/lmc.png" class="e-full--palm"/></a> 
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
