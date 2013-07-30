@@ -8,7 +8,6 @@
     "less"
   ],
   "author": "Robin Pokorný <robin.pokorny@lmc.eu>",
-  "title": "Emerald",
   "repository": {
     "type": "git",
     "url": "git://github.com/lmc-eu/emerald.git"
