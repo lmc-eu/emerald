@@ -6,6 +6,18 @@
 
         <link rel="stylesheet" href="css/emerald.css">
         <style>
+            .content {
+                margin: 15px 10%;
+                box-sizing: border-box;
+            }
+            @media only screen and (min-width: 768px) {
+                .content {
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0 10px;
+                }
+            }
+
             .demo {
                 margin-bottom: 15px;
                 padding: 15px;
@@ -15,60 +27,62 @@
         </style>
     </head>
     <body>
-        <div class="grid">
-           <div class="grid__item">
-                <div class="demo">
-                    full width
-                </div>
-            </div><!--
-            --><div class="grid__item e-8 e-16--desk">
-                <div class="demo">
-                    .e-8 .e-16--desk
-                </div>
-            </div><!--
-            --><div class="grid__item e-7--desk e-pull-2--desk">
-                <div class="demo">
-                    .e-7--desk .e-pull-2--desk
-                </div>
-            </div><!--
-            --><div class="grid__item e-8">
-                <div class="grid">
-                    <div class="grid__item e-2 e-4--desk">
-                        <div class="demo">
-                            .e-2 .e-4--desk
-                        </div>
-                    </div><!--
-                    --><div class="grid__item e-6 e-4--desk">
-                        <div class="demo">
-                            .e-6 .e-4--desk
+        <div class="content e-16 e-25--desk">
+            <div class="grid">
+               <div class="grid__item">
+                    <div class="demo">
+                        A full width
+                    </div>
+                </div><!--
+                --><div class="grid__item e-8 e-16--desk">
+                    <div class="demo">
+                        B .e-8 .e-16--desk
+                    </div>
+                </div><!--
+                --><div class="grid__item e-7--desk e-pull-2--desk">
+                    <div class="demo">
+                        C .e-7--desk .e-pull-2--desk
+                    </div>
+                </div><!--
+                --><div class="grid__item e-8">
+                    <div class="grid">
+                        <div class="grid__item e-2 e-4--desk">
+                            <div class="demo">
+                                D.A .e-2 .e-4--desk
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-6 e-4--desk">
+                            <div class="demo">
+                                D.B .e-6 .e-4--desk
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div><!--
-            --><div class="grid__item e-8">
-                <div class="grid">
-                    <div class="grid__item e-2 e-4--desk">
-                        <div class="demo">
-                            .e-2 .e-4--desk
-                        </div>
-                    </div><!--
-                    --><div class="grid__item e-6 e-4--desk">
-                        <div class="demo">
-                            .e-6 .e-4--desk
+                </div><!--
+                --><div class="grid__item e-8">
+                    <div class="grid">
+                        <div class="grid__item e-2 e-4--desk">
+                            <div class="demo">
+                                E.A .e-2 .e-4--desk
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-6 e-4--desk">
+                            <div class="demo">
+                                E.B .e-6 .e-4--desk
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div><!--
-            --><div class="grid__item e-9--desk">
-                <div class="grid">
-                    <div class="grid__item e-6 e-4--desk">
-                        <div class="demo">
-                            .e-6 .e-4--desk
-                        </div>
-                    </div><!--
-                    --><div class="grid__item e-10 e-5--desk">
-                        <div class="demo">
-                            .e-10 .e-5--desk
+                </div><!--
+                --><div class="grid__item e-9--desk">
+                    <div class="grid">
+                        <div class="grid__item e-6 e-4--desk">
+                            <div class="demo">
+                                F.A .e-6 .e-4--desk
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-10 e-5--desk">
+                            <div class="demo">
+                                F.B .e-10 .e-5--desk
+                            </div>
                         </div>
                     </div>
                 </div>

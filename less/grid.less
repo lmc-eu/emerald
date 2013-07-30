@@ -1,4 +1,4 @@
-.createGrid (@gutter-width) {
+.createGridStyle (@gutter-width) {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -7,11 +7,51 @@
 }
 .createGridItem (@gutter-width) {
     display: inline-block;
+    width: 100%;
     padding-right: (@gutter-width / 2);
     padding-left: (@gutter-width / 2);
+    text-align: left;
     vertical-align: top;
-    width: 100%;
+    direction: ltr;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.createGrid () {
+    .grid {
+        .createGridStyle(@gutter-width-palm);
+        &__item {
+            .createGridItem(@gutter-width-palm);
+        }
+    }
+}
+
+.createGridMods (@modifier) {
+    .grid {
+        // Reverse
+        &--rev@{modifier} {
+            direction: rtl;
+        }
+
+        // Obverse
+        &--obv@{modifier} {
+            direction: ltr;
+        }
+
+        // Left
+        &--left@{modifier} {
+            text-align: left;
+        }
+
+        // Right
+        &--right@{modifier} {
+            text-align: right;
+        }
+
+        // Center
+        &--center@{modifier} {
+            text-align: center;
+        }
+    }
 }

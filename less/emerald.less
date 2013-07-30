@@ -2,20 +2,13 @@
  *  Emerald
  */
 
-@import "variables.less";
-@import "columns.less";
-@import "grid.less";
+@import "variables";
+@import "columns";
+@import "grid";
 
-.grid {
-    .createGrid(@gutter-width-palm);
-    &__item {
-        .createGridItem(@gutter-width-palm);
-    }
-}
+.createGrid();
 
-body {
-    margin: 15px 10%;
-}
+.createGridMods (~"--palm");
 
 .createColumns (@columns-count-palm,
                 @column-width-palm,
@@ -23,11 +16,8 @@ body {
                 ~"--palm");
 
 @media only screen and (min-width: @screen-lap) {
-    body {
-        width: 620px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+
+    .createGridMods (~"");
 
     .createColumns (@columns-count-lap,
                     @column-width-lap,
@@ -36,9 +26,8 @@ body {
 }
 
 @media only screen and (min-width: @screen-desk) {
-    body {
-        width: 980px;
-    }
+
+    .createGridMods (~"--desk");
 
     .createColumns (@columns-count-desk,
                     @column-width-desk,
@@ -46,32 +35,4 @@ body {
                     ~"--desk");
 }
 
-
-.uhd() when (@generate-uhd) {
-    @media only screen and (min-width: @screen-uhd) {
-        body {
-            width: 1225px;
-        }
-        .grid {
-            .createGrid(@gutter-width-uhd);
-            &__item {
-                .createGridItem(@gutter-width-uhd);
-            }
-        }
-
-        .createColumns (@columns-count-lap,
-                        @column-width-uhd,
-                        @gutter-width-uhd,
-                        ~"");
-        .createColumns (@columns-count-desk,
-                        @column-width-uhd,
-                        @gutter-width-uhd,
-                        ~"--desk");
-        .createColumns (@columns-count-uhd,
-                        @column-width-uhd,
-                        @gutter-width-uhd,
-                        ~"--uhd");
-    }
-}
-
-.uhd();
+@import "responsive-visibility";

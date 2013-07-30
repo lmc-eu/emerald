@@ -1,0 +1,65 @@
+.visible-palm {
+    display: block;
+}
+.visible-lap {
+    display: none;
+}
+.visible-desk {
+    display: none;
+}
+
+.hidden-palm {
+    display: none;
+}
+.hidden-lap {
+    display: block;
+}
+.hidden-desk {
+    display: block;
+}
+
+
+@media only screen and (min-width: @screen-lap) {
+    .visible-palm {
+        display: none;
+    }
+    .visible-lap {
+        display: block;
+    }
+    .visible-desk {
+        display: none;
+    }
+
+    .hidden-palm {
+        display: block;
+    }
+    .hidden-lap {
+        display: none;
+    }
+    .hidden-desk {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: @screen-desk) {
+    .visible-palm {
+        display: none;
+    }
+    .visible-lap {
+        display: none;
+    }
+    .visible-desk {
+        display: block;
+    }
+
+    .hidden-palm {
+        display: block;
+    }
+    .hidden-lap {
+        display: block;
+    }
+    .hidden-desk {
+        display: none;
+    }
+}
+
