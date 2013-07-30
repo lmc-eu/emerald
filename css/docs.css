@@ -38,6 +38,13 @@ a:hover {
     box-sizing: border-box;
 }
 
+.header__subtitle{
+    font-size: 40%;
+    color: #229C7D;
+    text-transform: none;
+    vertical-align: bottom;
+}
+
 .footer {
     margin-top: 40px;
     font-size: 0.7em
