@@ -4,10 +4,57 @@
         <meta charset="utf-8">
         <title>Emerald demo</title>
 
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One|Delius' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/emerald.css">
         <style>
+            body {
+                font-family: 'Delius', cursive;
+            }
+
             .content {
-                margin: 15px 10%;
+                margin: 40px 10%;
+                box-sizing: border-box;
+            }
+
+            .footer {
+                margin-top: 40px;
+            }
+            
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #222927;
+                font-family: 'Poiret One', cursive;
+                font-size: 45px;
+            }
+
+            .demo {
+                margin-bottom: 15px;
+                padding: 15px;
+                background-color: #229C7D;
+                color: #fff;
+            }
+            .diamond1 {
+                height: 156px;
+                padding: 7% 7%;
+                background: #222927;
+                box-sizing: border-box;
+            }
+            .diamond2 {
+                height: 100%;
+                padding: 13% 13%;
+                background: #229C7D;
+                box-sizing: border-box;
+            }
+            .diamond3 {
+                height: 100%;
+                padding: 20% 20%;
+                background: #2EFFAF;
+                box-sizing: border-box;
+            }
+            .diamond4 {
+                height: 100%;
+                background: #C2FCD3;
                 box-sizing: border-box;
             }
             @media only screen and (min-width: 768px) {
@@ -16,18 +63,43 @@
                     margin-right: auto;
                     padding: 0 10px;
                 }
+                h1 {
+                    font-size: 65px;
+                }
+                .diamond1 {
+                    height: 260px;
+                }
+            }
+            @media only screen and (min-width: 1020px) {
+                .content {
+                    margin-top: 60px;
+                }
+                h1 {
+                    font-size: 80px;
+                }
+                .diamond1 {
+                    height: 290px;
+                }
             }
 
-            .demo {
-                margin-bottom: 15px;
-                padding: 15px;
-                background-color: #790F5B;
-                color: #fff;
-            }
         </style>
     </head>
     <body>
         <div class="content e-16 e-25--desk">
+            <div class="grid grid--center--palm">
+               <div class="grid__item e-3--palm e-5 e-6--desk">
+                    <div class="diamond1">
+                        <div class="diamond2">
+                            <div class="diamond3">
+                                <div class="diamond4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <h1>Emerald</h1>
+            </div>
             <div class="grid">
                <div class="grid__item">
                     <div class="demo">
@@ -39,9 +111,9 @@
                         B .e-8 .e-16--desk
                     </div>
                 </div><!--
-                --><div class="grid__item e-7--desk e-pull-2--desk">
+                --><div class="grid__item e-7--desk e-push-2--desk">
                     <div class="demo">
-                        C .e-7--desk .e-pull-2--desk
+                        C .e-7--desk .e-push-2--desk
                     </div>
                 </div><!--
                 --><div class="grid__item e-8">
@@ -86,6 +158,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="grid grid--center--palm footer">
+                <iframe src="http://ghbtns.com/github-btn.html?user=robinpokorny&repo=emerald&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="30"></iframe>
             </div>
         </div>
     </body>
