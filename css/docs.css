@@ -25,12 +25,33 @@ p {
 
 a {
     text-decoration: none;
-    color: #229C7D;
+    color: #229c7d;
 }
 
 a:hover {
     border-bottom: 1px solid #222927;
     color: #222927;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+dd p {
+    margin-top: 10px;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    border: 1px solid #2effaf;
+    white-space: nowrap;
+    background-color: #ebfaf6;
 }
 
 .wrapper {
@@ -40,7 +61,7 @@ a:hover {
 
 .header__subtitle{
     font-size: 40%;
-    color: #229C7D;
+    color: #229c7d;
     text-transform: none;
     vertical-align: bottom;
 }
@@ -71,7 +92,7 @@ a:hover {
 .demo {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #229C7D;
+    background-color: #229c7d;
     color: #fff;
 }
 .diamond1 {
@@ -84,13 +105,13 @@ a:hover {
 .diamond2 {
     height: 100%;
     padding: 13% 13%;
-    background: #229C7D;
+    background: #229c7d;
     box-sizing: border-box;
 }
 .diamond3 {
     height: 100%;
     padding: 20% 20%;
-    background: #2EFFAF;
+    background: #2effaf;
     box-sizing: border-box;
 }
 .diamond4 {
@@ -104,7 +125,7 @@ a:hover {
     top: 18%;
 	width: 13px;
 	height: 13px;
-	background: #EBFAF6;
+	background: #ebfaf6;
     transform:rotate(45deg);
     -ms-transform:rotate(45deg);
     -webkit-transform:rotate(45deg);
@@ -113,7 +134,7 @@ a:hover {
 .actionbar {
     padding: 1em;
     font-size: 0.8em;
-    background: #EBFAF6;
+    background: #ebfaf6;
 }
 
 .actionbar__wrapper {
@@ -121,21 +142,22 @@ a:hover {
     margin-bottom: 0;
 }
 
-.button {
+.actionbar__btn {
     display: block;
     margin: 0.5em 0;
     padding: 0.7em;
-    border: 1px solid #229C7D;
+    border: 1px solid #229c7d;
     text-decoration: none;
     text-align: center;
     font-family: 'Poiret One', cursive;
-    color: #229C7D;
+    color: #229c7d;
 }
 
-.button:hover {
-    background: #229C7D;
-    color: #EBFAF6;
-    border-color: #229C7D;
+.actionbar__btn:hover {
+    background: #229c7d;
+    color: #ebfaf6;
+    border-color: #229c7d;
+    text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
