@@ -20,11 +20,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.grid--rev--palm {
-  direction: rtl;
-}
 .grid--obv--palm {
   direction: ltr;
+}
+.grid--rev--palm {
+  direction: rtl;
 }
 .grid--left--palm {
   text-align: left;
@@ -34,6 +34,15 @@
 }
 .grid--center--palm {
   text-align: center;
+}
+.grid--top--palm > .grid__item {
+  vertical-align: top;
+}
+.grid--middle--palm > .grid__item {
+  vertical-align: middle;
+}
+.grid--bottom--palm > .grid__item {
+  vertical-align: bottom;
 }
 .e-16--palm {
   width: 640px;
@@ -182,12 +191,18 @@
 .e-full--palm {
   width: 100%;
 }
+.e-push-0--palm {
+  margin-left: 0;
+}
+.e-pull-0--palm {
+  margin-right: 0;
+}
 @media only screen and (min-width: 768px) {
-  .grid--rev {
-    direction: rtl;
-  }
   .grid--obv {
     direction: ltr;
+  }
+  .grid--rev {
+    direction: rtl;
   }
   .grid--left {
     text-align: left;
@@ -197,6 +212,15 @@
   }
   .grid--center {
     text-align: center;
+  }
+  .grid--top > .grid__item {
+    vertical-align: top;
+  }
+  .grid--middle > .grid__item {
+    vertical-align: middle;
+  }
+  .grid--bottom > .grid__item {
+    vertical-align: bottom;
   }
   .e-16 {
     width: 640px;
@@ -345,13 +369,19 @@
   .e-full {
     width: 100%;
   }
+  .e-push-0 {
+    margin-left: 0;
+  }
+  .e-pull-0 {
+    margin-right: 0;
+  }
 }
 @media only screen and (min-width: 1020px) {
-  .grid--rev--desk {
-    direction: rtl;
-  }
   .grid--obv--desk {
     direction: ltr;
+  }
+  .grid--rev--desk {
+    direction: rtl;
   }
   .grid--left--desk {
     text-align: left;
@@ -361,6 +391,15 @@
   }
   .grid--center--desk {
     text-align: center;
+  }
+  .grid--top--desk > .grid__item {
+    vertical-align: top;
+  }
+  .grid--middle--desk > .grid__item {
+    vertical-align: middle;
+  }
+  .grid--bottom--desk > .grid__item {
+    vertical-align: bottom;
   }
   .e-25--desk {
     width: 1000px;
@@ -589,6 +628,12 @@
   }
   .e-full--desk {
     width: 100%;
+  }
+  .e-push-0--desk {
+    margin-left: 0;
+  }
+  .e-pull-0--desk {
+    margin-right: 0;
   }
 }
 .visible--palm {

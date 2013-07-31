@@ -29,14 +29,14 @@
 
 .createGridMods (@modifier) {
     .grid {
-        // Reverse
-        &--rev@{modifier} {
-            direction: rtl;
-        }
-
         // Obverse
         &--obv@{modifier} {
             direction: ltr;
+        }
+
+        // Reverse
+        &--rev@{modifier} {
+            direction: rtl;
         }
 
         // Left
@@ -53,5 +53,27 @@
         &--center@{modifier} {
             text-align: center;
         }
+
+        // Top
+        &--top@{modifier} {
+            > .grid__item {
+                vertical-align: top;
+            }
+        }
+
+        // Middle
+        &--middle@{modifier} {
+            > .grid__item {
+                vertical-align: middle;
+            }
+        }
+
+        // bottom
+        &--bottom@{modifier} {
+            > .grid__item {
+                vertical-align: bottom;
+            }
+        }
+
     }
 }
