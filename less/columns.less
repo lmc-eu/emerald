@@ -1,21 +1,21 @@
-.createColumns (@index, @column-width, @gutter-width, @modifier) when (@index > 0) {
+.createColumns (@index; @column-width; @gutter-width; @modifier) when (@index > 0) {
 
 	.e-@{index}@{modifier} {
-		width: ((@index * @column-width) + (@index * @gutter-width));
+		width: (@index * (@column-width + @gutter-width));
 	}
 
     .e-push-@{index}@{modifier} {
-		margin-left: ((@index * @column-width) + (@index * @gutter-width));
+		margin-left: (@index * (@column-width + @gutter-width));
 	}
 
     .e-pull-@{index}@{modifier} {
-		margin-right: ((@index * @column-width) + (@index * @gutter-width));
+		margin-right: (@index * (@column-width + @gutter-width));
 	}
 
-	.createColumns(@index - 1, @column-width, @gutter-width, @modifier);
+	.createColumns(@index - 1; @column-width; @gutter-width; @modifier);
 }
 
-.createColumns (0, @column-width , @gutter-width, @modifier) {
+.createColumns (0; @column-width ; @gutter-width; @modifier) {
     .e-full@{modifier} {
         width: 100%;
     }

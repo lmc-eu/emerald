@@ -1,28 +1,22 @@
-.createGridStyle (@gutter-width) {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-right: (@gutter-width / -2);
-    margin-left: (@gutter-width / -2);
-}
-.createGridItem (@gutter-width) {
-    display: inline-block;
-    width: 100%;
-    padding-right: (@gutter-width / 2);
-    padding-left: (@gutter-width / 2);
-    text-align: left;
-    vertical-align: top;
-    direction: ltr;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.createGrid () {
+.generateBasicGrid () {
+    .wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        box-sizing: border-box;
+    }
     .grid {
-        .createGridStyle(@gutter-width-palm);
+        list-style: none;
+        margin: 0;
+        padding: 0;
         &__item {
-            .createGridItem(@gutter-width-palm);
+           display: inline-block;
+            width: 100%;
+            text-align: left;
+            vertical-align: top;
+            direction: ltr;
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box; 
         }
     }
 }
@@ -75,5 +69,29 @@
             }
         }
 
+    }
+}
+
+.updateGrid (@columns-count; @column-width; @gutter-width; @modifier) {
+    .grid {
+        margin-right: (@gutter-width / -2);
+        margin-left: (@gutter-width / -2); 
+        &__item {
+            padding-right: (@gutter-width / 2);
+            padding-left: (@gutter-width / 2);
+        }
+    }
+
+    .createGridMods (@modifier);
+    
+    .createColumns (@columns-count;
+                    @column-width;
+                    @gutter-width;
+                    @modifier);
+
+    .wrapper {
+        width: (@columns-count * (@column-width + @gutter-width));
+        padding-right: (@gutter-width / 2);
+        padding-left: (@gutter-width / 2); 
     }
 }

@@ -1,38 +1,36 @@
 /*
  *  Emerald
  */
-
 @import "variables";
 @import "columns";
 @import "grid";
 
-.createGrid();
+.generateBasicGrid();
 
-.createGridMods (~"--palm");
-
-.createColumns (@columns-count-palm,
-                @column-width-palm,
-                @gutter-width-palm,
-                ~"--palm");
+.updateGrid (@columns-count-palm;
+             @column-width-palm;
+             @gutter-width-palm;
+             ~"--palm");
 
 @media only screen and (min-width: @screen-lap) {
 
-    .createGridMods (~"");
+    .createColumns (@columns-count-lap;
+                    @column-width-lap;
+                    @gutter-width-lap;
+                    ~"--palm");
 
-    .createColumns (@columns-count-lap,
-                    @column-width-lap,
-                    @gutter-width-lap,
-                    ~"" );
+    .updateGrid (@columns-count-lap;
+                 @column-width-lap;
+                 @gutter-width-lap;
+                 ~"");
 }
 
 @media only screen and (min-width: @screen-desk) {
 
-    .createGridMods (~"--desk");
-
-    .createColumns (@columns-count-desk,
-                    @column-width-desk,
-                    @gutter-width-desk,
-                    ~"--desk");
+    .updateGrid (@columns-count-desk;
+                 @column-width-desk;
+                 @gutter-width-desk;
+                 ~"--desk");
 }
 
 @import "responsive-visibility";

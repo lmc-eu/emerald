@@ -1,28 +1,20 @@
-// Viewport breakpoints
+// For each device size (palm, lap, desk) specify this parametres
+// @screen-*            Viewport breakpoint
+// @columns-count-*     Number of grid sizes to generate
+// @column-width-*      Single column width
+// @gutter-width-*      Width of the gutter between columns
+
+// As Emerald is mobile-first no @screen-palm is needed
+@columns-count-palm: 8;
+@column-width-palm: 5vw;
+@gutter-width-palm: 5vw;
+
 @screen-lap: 768px;
-@screen-desk: 1020px;
-
-// Single column width
-@column-width-palm: 20px;
-@column-width-lap: 20px;
-@column-width-desk: 20px;
-
-// Width of the gutter between columns
-@gutter-width-palm: 20px;
-@gutter-width-lap: 20px;
-@gutter-width-desk: 20px;
-
-// Number of grid sizes to generate
-// Note: does not affect the total number of columns possible to have on a row!
-//       Think of it as a number of columns the widest element would occupy.
-//       To be save use a variant of:
-//       @columns-count-lap:
-//           unit(
-//               floor(
-//                   @screen-lap / (@column-width-lap + @gutter-width-lap)
-//               ),
-//               ~"" // Ge rid of units
-//           );
-@columns-count-palm: 16;
 @columns-count-lap: 16;
+@column-width-lap: 20px;
+@gutter-width-lap: 20px;
+
+@screen-desk: 1020px;
 @columns-count-desk: 25;
+@column-width-desk: 20px;
+@gutter-width-desk: 20px;
