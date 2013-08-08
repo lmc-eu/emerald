@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     </head>
     <body>
-        <div class="wrapper header e-16 e-25--desk">
+        <div class="wrapper header">
             <div class="grid grid--center--palm">
                 <div class="grid__item e-3--palm e-5 e-6--desk">
                     <div class="diamond1">
@@ -37,17 +37,17 @@
                     <div class="grid__item e-4">
                         <a href="https://github.com/lmc-eu/emerald" class="actionbar__btn">View on GitHub</a>
                     </div><!--
-                    --><div class="grid__item e-4">
+                    --><div class="grid__item e-4--palm">
                         <a href="https://github.com/lmc-eu/emerald/archive/master.zip" class="actionbar__btn">Download</a>
                     </div><!--
-                    --><div class="grid__item e-4">
+                    --><div class="grid__item e-4--palm">
                         <a href="http://twitter.com/intent/tweet?url=http://lmc-eu.github.io/emerald/&amp;text=Emerald - a responsive grid system written in LESS&amp;via=lmc_eu&amp;related=yarrcat" target="_blank" class="actionbar__btn">Tweet</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="wrapper e-16 e-25--desk">
+        <div class="wrapper">
             <div class="grid">
                 <div class="grid__item">
                     <h2>The philosophy</h2>
@@ -55,7 +55,7 @@
                         <dt>Columns and gutters are the same fixed width</dt>
                         <dd class="e-push-0--palm e-push-1">
                             <p>Designers love to work with fixed sizes and you will too.</p>
-                            <p>By default Emerald uses <code>20px</code> for both widths. In result, a line can accomodate 16 <code>.e-1</code> columns on tablet (or one big <code>.e-16</code> - you know how it works, right?) and 25 on desktop. Grid items are generaly stacked on mobile.</p>
+                            <p>By default Emerald uses for both column and gutter widths <code>5vw</code> (<a href="http://css-tricks.com/viewport-sized-typography/" title="CSS Tricks: Viewport Sized Typography">what is this?</a>) on mobile and <code>20px</code> on tablets and above. In result, a line can accomodate 16 <code>.e-1</code> columns on tablet (or one big <code>.e-16</code> - you know how it works, right?), 8 on mobile, and 25 on desktop.</p>
                         </dd>
 
                         <dt>Mobile-first responsive choreography with OOCSS and BEM</dt>
@@ -88,44 +88,49 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper e-16 e-25--desk">
+        <div class="wrapper">
             <div class="grid">
-                <div class="grid__item e-1">
+                <div class="grid__item e-1--palm">
                     <div class="demo">
-                        .e-1
+                        .e-1--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-2">
+                --><div class="grid__item e-2--palm">
                     <div class="demo">
-                        .e-2
+                        .e-2--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-3">
+                --><div class="grid__item e-3--palm">
                     <div class="demo">
-                        .e-3
+                        .e-3--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-4">
+                --><div class="grid__item e-4--palm">
                     <div class="demo">
-                        .e-5
+                        .e-4--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-5">
+                --><div class="grid__item e-5--palm">
                     <div class="demo">
-                        .e-5
+                        .e-5--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-6">
+                --><div class="grid__item e-6--palm">
                     <div class="demo">
-                        .e-6
+                        .e-6--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-7">
+                --><div class="grid__item e-7--palm">
                     <div class="demo">
-                        .e-7
+                        .e-7--palm
                     </div>
                 </div><br /><!--
-                --><div class="grid__item e-8">
+                --><div class="grid__item e-8--palm">
+                    <div class="demo">
+                        .e-8--palm
+                    </div>
+                </div><br /><!--
+                --><div class="grid__item e-9">
                     <div class="demo">
                         .e-9
                     </div>
@@ -214,14 +219,14 @@
             </div>
         </div>
 
-        <div class="wrapper e-16 e-25--desk">
+        <div class="wrapper">
             <div class="grid">
                 <div class="grid__item">
                     <h2>Layout example</h2>
                 </div>
             </div>
         </div>
-        <div class="wrapper e-16 e-25--desk">
+        <div class="wrapper">
             <div class="grid">
                 <div class="grid__item">
                     <div class="demo">
@@ -230,14 +235,14 @@
                 </div><!--
                 --><div class="grid__item e-16">
                     <div class="grid">
-                        <div class="grid__item e-8">
+                        <div class="grid__item e-4--palm e-8">
                             <div class="demo">
-                                <strong>C.A</strong> .e-8
+                                <strong>C.A</strong> .e-4--palm .e-8
                             </div>
                         </div><!--
-                        --><div class="grid__item e-8">
+                        --><div class="grid__item e-4--palm e-8">
                             <div class="demo">
-                                <strong>C.B</strong> .e-8
+                                <strong>C.B</strong> .e-4--palm .e-8
                             </div>
                         </div><!--
                         --><div class="grid__item e-16">
@@ -275,15 +280,15 @@
             </div>
         </div>
 
-        <div class="wrapper footer e-16 e-25--desk">
-            <div class="grid">
-                <div class="grid__item e-10 e-16--desk">
+        <div class="wrapper footer">
+            <div class="grid grid--middle--palm grid--top">
+                <div class="grid__item e-5--palm e-10 e-16--desk">
                     <span class="footer__title">Emerald</span>
                     <p class="footer__p">Designed and hand-coded by <a href="https://twitter.com/robinpokorny">@robinpokorny</a> at <a href="https://github.com/lmc-eu">LMC</a>.</p>
                     <p class="footer__p">Licenced under <a href="https://github.com/lmc-eu/emerald/blob/master/LICENSE">MIT</a> licence. View the <a href="https://github.com/lmc-eu/emerald#readme">README</a> file.</p>
                 </div><!--
-                --><div class="grid__item e-4 e-4--desk e-push-2 e-push-5--desk">
-                    <a href="http://www.lmc.eu/" class="footer__logo hidden--palm" title="LMC s.r.o."><img src="images/lmc.png" class="e-full--palm"/></a> 
+                --><div class="grid__item e-3--palm e-4 e-4--desk e-push-2 e-push-5--desk">
+                    <a href="http://www.lmc.eu/" class="footer__logo" title="LMC s.r.o."><img src="images/lmc.png" class="e-full--palm"/></a> 
                 </div>
             </div>
         </div>
