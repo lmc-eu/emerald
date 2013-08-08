@@ -56,6 +56,7 @@ code {
 
 .wrapper {
     margin: 40px 10%;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -100,23 +101,27 @@ code {
     height: 156px;
     padding: 7% 7%;
     background: #222927;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .diamond2 {
     height: 100%;
     padding: 13% 13%;
     background: #229c7d;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .diamond3 {
     height: 100%;
     padding: 20% 20%;
     background: #2effaf;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .diamond4 {
     height: 100%;
     background: #C2FCD3;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .glitter {
