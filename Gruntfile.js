@@ -1,37 +1,42 @@
 /*global module:false*/
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-legacssy');    
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Project configuration.
     grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
-    less: {
-        dist: {
-            files: {
-                'css/emerald.css': 'less/emerald.less'
+        // Task configuration.
+        less: {
+            dist: {
+                files: {
+                    'css/emerald.css': 'less/emerald.less'
+                }
             }
         },
-        min: {
-            options: {
-                yuicompress: true,
-                report: 'gzip'
-            },
-            files: {
-                'css/emerald.min.css': 'less/emerald.less'
+        legacssy: {
+            dist: {
+                files: {
+                    'css/emerald-legacy.css': 'css/emerald.css'
+                }
+            }
+        },
+        cssmin: {
+            minify: {
+                options: {
+                    report: 'gzip'
+                },
+                expand: true,
+                cwd: 'css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'css/',
+                ext: '.min.css'
             }
         }
-    }
     });
 
     // Default task.
-    grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ['less', 'legacssy', 'cssmin']);
 
 };
 

@@ -32,7 +32,12 @@ Either include source *LESS* files into your project (recommended) or use compil
 Emerald grid system is tested in the latest versions of the major browsers on the major desktop and mobile platforms.
 
 ### Internet Explorer 8
-The grid is done with IE8 in mind and tested in it. However IE8 does not support min/max-width CSS3 media queries and **Emerald does not deal with by itself**. Use [scottjehl/Respond](http://github.com/scottjehl/Respond) or special stylesheet loaded by a conditional comment.
+Legacy browser are supported by [grunt-legacssy](https://github.com/robinpokorny/grunt-legacssy). Load the grid using:
+
+```css
+<!--[if lte IE 8]>     <link rel="stylesheet" href="css/emerald-legacy.min.css"> <![endif]-->
+<!--[if gt IE 8]><!--> <link rel="stylesheet" href="css/emerald.min.css"> <!--<![endif]-->
+```
 
 ## The name
 Please note that the name *Emerald* does not refer to the gemstone of that name but to a [diamond cut](http://www.lumeradiamonds.com/diamond-education/emerald-cut-diamond) *"originally developed for the cutting of emeralds."*
