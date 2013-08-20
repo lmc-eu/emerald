@@ -1,8 +1,7 @@
 /*global module:false*/
 module.exports = function(grunt) {
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-legacssy');    
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     // Project configuration.
     grunt.initConfig({
@@ -19,6 +18,16 @@ module.exports = function(grunt) {
                 files: {
                     'css/emerald-legacy.css': 'css/emerald.css'
                 }
+            }
+        },
+        csslint: {
+            strict: {
+                options: {
+                    'box-model': false,
+                    'box-sizing': false,
+                    'known-properties': false
+                },
+                src: ['css/emerald.css']
             }
         },
         cssmin: {
