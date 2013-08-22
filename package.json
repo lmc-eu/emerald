@@ -1,6 +1,6 @@
 {
   "name": "emerald",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Emerald is a responsive grid system written in LESS",
     "keywords": [
     "css",
@@ -20,7 +20,7 @@
     "grunt-legacssy": "~0.2.0",
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-less": "0.6.x",
+    "grunt-contrib-less": "~0.6.4",
     "matchdep": "~0.1.2"
   },
   "license": "MIT",

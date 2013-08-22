@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', ['less', 'legacssy', 'cssmin']);
+    grunt.registerTask('default', ['less', 'legacssy', 'csslint', 'cssmin']);
 
 };
 

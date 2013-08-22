@@ -484,7 +484,7 @@
     padding-left: 10px;
   }
 }
-@media only screen and (min-width: 1020px) {
+@media only screen and (min-width: 992px) {
   .grid {
     margin-right: -10px;
     margin-left: -10px;
@@ -795,7 +795,7 @@
     display: block;
   }
 }
-@media only screen and (min-width: 1020px) {
+@media only screen and (min-width: 992px) {
   .visible--palm {
     display: none;
   }
