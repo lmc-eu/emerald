@@ -5,7 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <title>Emerald</title>
 
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/emerald-legacy.min.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="css/emerald.min.css">
+        <!--<![endif]-->
         <link href='http://fonts.googleapis.com/css?family=Poiret+One|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/docs.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -222,6 +227,121 @@
         <div class="wrapper">
             <div class="grid">
                 <div class="grid__item">
+                    <h2>Grid modifications</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="grid">
+                <div class="grid__item">
+                    <h3>Default (.grid--obv.grid--left.grid--top)</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h3>.grid--rev</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid grid--rev--palm">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h3>.grid--right</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid grid--right--palm">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h3>.grid--center</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid grid--center--palm">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h3>.grid--middle</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid grid--middle--palm">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt demo--long">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h3>.grid--bottom</h3>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="grid grid--bottom--palm">
+                        <div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo demo--alt demo--long">
+                                <strong>A</strong>
+                            </div>
+                        </div><!--
+                        --><div class="grid__item e-3--palm e-7 e-11--desk">
+                            <div class="demo">
+                                <strong>B</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="grid">
+                <div class="grid__item">
                     <h2>Layout example</h2>
                 </div>
             </div>
@@ -246,7 +366,7 @@
                             </div>
                         </div><!--
                         --><div class="grid__item e-16">
-                            <div class="demo">
+                            <div class="demo demo--long">
                                 <strong>C.C</strong> .e-16
                             </div>
                         </div><!--
@@ -268,7 +388,7 @@
                     </div>
                 </div><!--
                 --><div class="grid__item e-7--desk e-push-2--desk">
-                    <div class="demo">
+                    <div class="demo demo--alt">
                         <strong>D</strong> .e-7--desk .e-push-2--desk
                     </div>
                 </div><!--

@@ -95,6 +95,16 @@ code {
     background-color: #229c7d;
     color: #fff;
 }
+
+.demo--long {
+    min-height: 150px;
+}
+
+.demo--alt {
+    background-color: #C2FCD3;
+    color: #222927;
+}
+
 .diamond1 {
     position: relative;
     height: 156px;
