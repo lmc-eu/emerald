@@ -101,8 +101,10 @@ code {
 }
 
 .demo--alt {
-    background-color: #C2FCD3;
-    color: #222927;
+    padding: 14px;
+    background-color: #ebfaf6;
+    color: #229c7d;
+    border: 1px solid #229c7d;
 }
 
 .diamond1 {
@@ -146,7 +148,7 @@ code {
 }
 
 .actionbar {
-    padding: 1em;
+    padding: 1em 0;
     font-size: 0.8em;
     background: #ebfaf6;
 }
@@ -210,7 +212,7 @@ code {
     .header {
         margin-top: 60px;
     }
-    
+
     .footer {
         margin-top: 120px;
         margin-bottom: 80px;
