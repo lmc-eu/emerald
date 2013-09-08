@@ -3,9 +3,7 @@
   "version": "0.3.0",
   "main": [
     "css/emerald.css",
-    "css/emerald.min.css",
     "css/emerald-legacy.css",
-    "css/emerald-legacy.min.css",
     "less/emerald.less",
     "less/variables.less",
     "less/grid.less",
