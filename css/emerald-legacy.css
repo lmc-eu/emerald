@@ -31,6 +31,7 @@
 }
 
 .grid__item {
+  display: inline-block;
   padding-right: 2.5vw;
   padding-left: 2.5vw;
 }
@@ -165,6 +166,10 @@
 
 .e-full--palm {
   width: 100%;
+}
+
+.e-0--palm {
+  display: none;
 }
 
 .e-push-0--palm {
@@ -377,6 +382,10 @@
   width: 100%;
 }
 
+.e-0--palm {
+  display: none;
+}
+
 .e-push-0--palm {
   margin-left: 0;
 }
@@ -391,6 +400,7 @@
 }
 
 .grid__item {
+  display: inline-block;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -623,6 +633,10 @@
   width: 100%;
 }
 
+.e-0 {
+  display: none;
+}
+
 .e-push-0 {
   margin-left: 0;
 }
@@ -643,6 +657,7 @@
 }
 
 .grid__item {
+  display: inline-block;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -981,6 +996,10 @@
 
 .e-full--desk {
   width: 100%;
+}
+
+.e-0--desk {
+  display: none;
 }
 
 .e-push-0--desk {
