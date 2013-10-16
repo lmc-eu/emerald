@@ -22,13 +22,13 @@
   box-sizing: border-box;
 }
 .grid {
-  margin-right: -2.5vw;
-  margin-left: -2.5vw;
+  margin-right: -3vw;
+  margin-left: -3vw;
 }
 .grid__item {
   display: inline-block;
-  padding-right: 2.5vw;
-  padding-left: 2.5vw;
+  padding-right: 3vw;
+  padding-left: 3vw;
 }
 .grid--obv--palm {
   direction: ltr;
@@ -55,76 +55,76 @@
   vertical-align: bottom;
 }
 .e-8--palm {
-  width: 80vw;
+  width: 96vw;
 }
 .e-push-8--palm {
-  margin-left: 80vw;
+  margin-left: 96vw;
 }
 .e-pull-8--palm {
-  margin-right: 80vw;
+  margin-right: 96vw;
 }
 .e-7--palm {
-  width: 70vw;
+  width: 84vw;
 }
 .e-push-7--palm {
-  margin-left: 70vw;
+  margin-left: 84vw;
 }
 .e-pull-7--palm {
-  margin-right: 70vw;
+  margin-right: 84vw;
 }
 .e-6--palm {
-  width: 60vw;
+  width: 72vw;
 }
 .e-push-6--palm {
-  margin-left: 60vw;
+  margin-left: 72vw;
 }
 .e-pull-6--palm {
-  margin-right: 60vw;
+  margin-right: 72vw;
 }
 .e-5--palm {
-  width: 50vw;
+  width: 60vw;
 }
 .e-push-5--palm {
-  margin-left: 50vw;
+  margin-left: 60vw;
 }
 .e-pull-5--palm {
-  margin-right: 50vw;
+  margin-right: 60vw;
 }
 .e-4--palm {
-  width: 40vw;
+  width: 48vw;
 }
 .e-push-4--palm {
-  margin-left: 40vw;
+  margin-left: 48vw;
 }
 .e-pull-4--palm {
-  margin-right: 40vw;
+  margin-right: 48vw;
 }
 .e-3--palm {
-  width: 30vw;
+  width: 36vw;
 }
 .e-push-3--palm {
-  margin-left: 30vw;
+  margin-left: 36vw;
 }
 .e-pull-3--palm {
-  margin-right: 30vw;
+  margin-right: 36vw;
 }
 .e-2--palm {
-  width: 20vw;
+  width: 24vw;
 }
 .e-push-2--palm {
-  margin-left: 20vw;
+  margin-left: 24vw;
 }
 .e-pull-2--palm {
-  margin-right: 20vw;
+  margin-right: 24vw;
 }
 .e-1--palm {
-  width: 10vw;
+  width: 12vw;
 }
 .e-push-1--palm {
-  margin-left: 10vw;
+  margin-left: 12vw;
 }
 .e-pull-1--palm {
-  margin-right: 10vw;
+  margin-right: 12vw;
 }
 .e-full--palm {
   width: 100%;
@@ -139,9 +139,9 @@
   margin-right: 0;
 }
 .wrapper {
-  width: 80vw;
-  padding-right: 2.5vw;
-  padding-left: 2.5vw;
+  width: 96vw;
+  padding-right: 3vw;
+  padding-left: 3vw;
 }
 @media only screen and (min-width: 768px) {
   .e-16--palm {
