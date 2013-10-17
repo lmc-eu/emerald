@@ -54,7 +54,7 @@ code {
 }
 
 .wrapper {
-    margin: 40px 10%;
+    margin: 40px 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -176,14 +176,31 @@ code {
     text-decoration: none;
 }
 
+.actionbar__btn--new {
+    position: relative;
+}
+
+.actionbar__btn--new:after {
+    content: "New \21B4";
+    position: absolute;
+    top: -21px;
+    left: 0;
+    color: #229c7d;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
 @media only screen and (min-width: 768px) {
+    body {
+        padding-top: 40px;
+    }
+
     .wrapper {
         margin: 0 auto;
         padding: 0 10px;
     }
 
     .header {
-        margin-top: 40px;
         margin-bottom: 40px;
     }
 
@@ -191,9 +208,17 @@ code {
         margin-bottom: 40px;
     }
 
+    .actionbar__btn--new:after {
+        left: -40px;
+    }
+
     .footer {
         margin-top: 100px;
         margin-bottom: 60px;
+    }
+
+    .footer__title--standalone {
+        text-align: right;
     }
 
     h1 {
@@ -209,8 +234,8 @@ code {
     }
 }
 @media only screen and (min-width: 1020px) {
-    .header {
-        margin-top: 60px;
+    body {
+        padding-top: 60px;
     }
 
     .footer {
