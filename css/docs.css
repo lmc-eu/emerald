@@ -54,7 +54,8 @@ code {
 }
 
 .wrapper {
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
