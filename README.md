@@ -31,6 +31,14 @@ Either include source *LESS* files into your project (recommended) or use compil
 
 Emerald grid system is tested in the latest versions of the major browsers on the major desktop and mobile platforms.
 
+### Support for `vw` units
+Android browser does not support `vw` units. Load `jQuery` and `emerald.js` at the
+bootom of the page:
+
+```html
+<script src="js/emerald.js"></script>
+```
+
 ### Internet Explorer 8
 Legacy browser are supported by [grunt-legacssy](https://github.com/robinpokorny/grunt-legacssy). Load the grid using:
 
