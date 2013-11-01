@@ -27,7 +27,7 @@ var columnsCount = 8
     gutterWidth = 6,
     screenLap = 768,
     $style = $('<style />' ).appendTo('head'),
-    emulateEmarald = function() {
+    emulateEmerald = function() {
         var width = parseInt(window.innerWidth,10);
 
         // Do not continue if not on mobile
@@ -70,6 +70,6 @@ var columnsCount = 8
     };
 
 if (!supportsVw) {
-    emulateEmarald();
-    $(window).resize(emulateEmarald);
+    emulateEmerald();
+    $(window).resize(emulateEmerald);
 }
