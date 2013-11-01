@@ -7,14 +7,16 @@
  * Based on Modernizr: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css/vwunit.js
  */
 var supportsVw = function() {
-    var $elem = $('<div />').appendTo('body').css('width', '50vw');
+    var elem = document.createElement("div");
+    elem.style.width = '50vw';
+    document.body.appendChild(elem);
 
-    var width = (parseInt(window.innerWidth,10) / 2),
+    var width = parseInt(window.innerWidth / 2,10),
         compStyle = parseInt((window.getComputedStyle ?
-                    getComputedStyle($elem[0], null) :
-                    $elem[0].currentStyle)['width'],10);
+                    getComputedStyle(elem, null) :
+                    elem.currentStyle)['width'],10);
 
-    $elem.remove();
+    document.body.removeChild(elem);
 
     return width === compStyle;
 }();
@@ -26,12 +28,13 @@ var columnsCount = 8
     columnWidth = 6,
     gutterWidth = 6,
     screenLap = 768,
-    $style = $('<style />' ).appendTo('head'),
+    headStyle = document.createElement("style"),
     emulateEmerald = function() {
         var width = parseInt(window.innerWidth,10);
 
         // Do not continue if not on mobile
         if (width > screenLap) {
+            headStyle.innerHTML = "";
             return;
         }
 
@@ -66,10 +69,13 @@ var columnsCount = 8
 
         style += '}';
 
-        $style.html(style);
+        console.log(style);
+
+        headStyle.innerHTML = style;
     };
 
 if (!supportsVw) {
+    document.body.appendChild(headStyle);
     emulateEmerald();
-    $(window).resize(emulateEmerald);
+    window.onresize = emulateEmerald;
 }
