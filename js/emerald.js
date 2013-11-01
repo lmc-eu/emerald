@@ -80,8 +80,8 @@
         };
 
     if (!supportsVw) {
-        document.body.appendChild(headStyle);
+        document.head.appendChild(headStyle);
         emulateEmerald();
-        window.onresize = emulateEmerald;
+        window.addEventListener('resize', emulateEmerald);
     }
 }());
