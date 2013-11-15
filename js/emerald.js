@@ -7,6 +7,14 @@
     /*jslint browser:true */
 
     /*
+     * Legacy browsers (e.g. IE8) should be served the desktop version only
+     * and therefore do not need to emulate mobile grid.
+     */
+    if (!Element.prototype.addEventListener) {
+        return;
+    }
+
+    /*
      * Viewport units support test
      * Based on Modernizr: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css/vwunit.js
      */
