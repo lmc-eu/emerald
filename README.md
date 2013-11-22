@@ -59,3 +59,7 @@ This grid system was inspired by:
 * [csswizardry/csswizardry-grids](http://github.com/csswizardry/csswizardry-grids)
 * [twbs/bootstrap](http://github.com/twbs/bootstrap)
 * [yui/pure](http://github.com/yui/pure)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmc-eu/emerald/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
