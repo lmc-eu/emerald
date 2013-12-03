@@ -61,5 +61,5 @@ This grid system was inspired by:
 * [yui/pure](http://github.com/yui/pure)
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmc-eu/emerald/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmc-eu/emerald/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Dependency Status](https://gemnasium.com/lmc-eu/emerald.png)](https://gemnasium.com/lmc-eu/emerald)
 
