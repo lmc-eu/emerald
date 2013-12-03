@@ -1,34 +1,86 @@
-.createColumns (@index; @column-width; @gutter-width; @modifier) when (@index > 0) {
+// ==========================================================================
+// Columns
+// ==========================================================================
 
-	.e-@{index}@{modifier} {
+//
+// Recursively creates classes defining individual column sizes, pushes, and
+// pulls. The actual widths are counted according to @column-width and
+// @gutter-width. Going down from @index (the number called with) to zero.
+// Appends the @modifier string to the class name.
+// --------------------------------------------------------------------------
+.buildColumns (@index; @column-width; @gutter-width; @modifier) when (@index > 0) {
+
+	// Grid item class wide @index columns 
+    .e-@{index}@{modifier} {
 		width: (@index * (@column-width + @gutter-width));
 	}
 
+	// Create space of @index columns on the left
     .e-push-@{index}@{modifier} {
 		margin-left: (@index * (@column-width + @gutter-width));
 	}
 
+	// Create space of @index columns on the right
     .e-pull-@{index}@{modifier} {
 		margin-right: (@index * (@column-width + @gutter-width));
 	}
 
-	.createColumns(@index - 1; @column-width; @gutter-width; @modifier);
+    // Call itself with the smaller index
+	.buildColumns((@index - 1); @column-width; @gutter-width; @modifier);
 }
 
-.createColumns (0; @column-width ; @gutter-width; @modifier) {
+// The final recursion step
+.buildColumns (0; @column-width ; @gutter-width; @modifier) {
+
+    // Reset to be expansible
     .e-full@{modifier} {
         width: 100%;
     }
 
+    // Hide on this device (and futher if not overwritted)
     .e-0@{modifier} {
         display: none;
     }
 
+    // Reset to no-pushing
     .e-push-0@{modifier} {
         margin-left: 0;
     }
 
+    // Reset to no-pulling
     .e-pull-0@{modifier} {
         margin-right: 0;
     }
+}
+
+//
+// Interface for easier and more logical use.
+// For @grid-size specification see variables.less.
+// --------------------------------------------------------------------------
+.addColumns (@grid-size; @update: false) {
+    // Prepare the data
+    @columns-count: extract(@grid-size, 1);
+    @column-width: extract(@grid-size, 2);
+    @gutter-width: extract(@grid-size, 3);
+    @modifier: extract(@grid-size, 4);
+
+    // Calcute the width of the wrapper
+    .wrapper {
+        width: (@columns-count * (@column-width + @gutter-width));
+    }
+    // Call the creation of columns
+    .buildColumns (@columns-count; @column-width; @gutter-width; @modifier);
+}
+
+// Updating columns is currently is the same as adding - up to the calculation
+// of the wrapper width
+.updateColumns (@grid-size) {
+   // Prepare the data
+    @columns-count: extract(@grid-size, 1);
+    @column-width: extract(@grid-size, 2);
+    @gutter-width: extract(@grid-size, 3);
+    @modifier: extract(@grid-size, 4);
+
+    // Call the creation of columns
+    .buildColumns (@columns-count; @column-width; @gutter-width; @modifier); 
 }

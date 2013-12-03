@@ -1,4 +1,8 @@
-.generateBasicGrid () {
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+.initializeGrid () {
     .wrapper {
         margin-right: auto;
         margin-left: auto;
@@ -6,6 +10,7 @@
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
     }
+
     .grid {
         list-style: none;
         margin: 0;
@@ -23,7 +28,9 @@
     }
 }
 
-.createGridMods (@modifier) {
+.gridMods (@grid-size) {
+
+    @modifier: extract(@grid-size, 4);
     .grid {
         // Obverse
         &--obv@{modifier} {
@@ -64,7 +71,7 @@
             }
         }
 
-        // bottom
+        // Bottom
         &--bottom@{modifier} {
             > .grid__item {
                 vertical-align: bottom;
@@ -74,7 +81,10 @@
     }
 }
 
-.updateGrid (@columns-count; @column-width; @gutter-width; @modifier) {
+.updateGrid (@grid-size) {
+    @column-width: extract(@grid-size, 2);
+    @gutter-width: extract(@grid-size, 3);
+
     .grid {
         margin-right: (@gutter-width / -2);
         margin-left: (@gutter-width / -2);
@@ -85,15 +95,7 @@
         }
     }
 
-    .createGridMods (@modifier);
-
-    .createColumns (@columns-count;
-                    @column-width;
-                    @gutter-width;
-                    @modifier);
-
     .wrapper {
-        width: (@columns-count * (@column-width + @gutter-width));
         padding-right: (@gutter-width / 2);
         padding-left: (@gutter-width / 2);
     }

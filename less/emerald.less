@@ -1,36 +1,44 @@
-/*
- *  Emerald
- */
+/*! Emerald v0.7.0 | MIT Licence | http://lmc-eu.github.io/emerald/ */
+
+// ==========================================================================
+// Emerald - a pragmatic responsive grid system in LESS
+// ==========================================================================
+
+//
+// Import variables and generators
+// --------------------------------------------------------------------------
 @import "variables";
-@import "columns";
 @import "grid";
+@import "columns";
 
-.generateBasicGrid();
+//
+// The first use of the grid, everything has to be set up.
+// --------------------------------------------------------------------------
+.initializeGrid();
+.updateGrid(@grid-palm);
+.addColumns(@grid-palm);
+.gridMods(@grid-palm);
 
-.updateGrid (@columns-count-palm;
-             @column-width-palm;
-             @gutter-width-palm;
-             ~"--palm");
-
+//
+// When updating to a new device with different column width or gutter width
+// we must take these four steps:
+//     (1) Update wrappper, grid, and grid items paddings and margins.
+//     (2) Update previously used grid classes (one in this case).
+//     (3) Add grid classes for the new column size.
+//     (4) Grid modifications and visibility for current device.
+// --------------------------------------------------------------------------
 @media only screen and (min-width: @screen-lap) {
 
-    .createColumns (@columns-count-lap;
-                    @column-width-lap;
-                    @gutter-width-lap;
-                    ~"--palm");
-
-    .updateGrid (@columns-count-lap;
-                 @column-width-lap;
-                 @gutter-width-lap;
-                 ~"");
+    .updateGrid(@grid-lap);     // (1)
+    .updateColumns(@grid-lap);  // (2)
+    .addColumns(@grid-lap);     // (3)
+    .gridMods(@grid-lap);       // (4)
 }
 
 @media only screen and (min-width: @screen-desk) {
 
-    .updateGrid (@columns-count-desk;
-                 @column-width-desk;
-                 @gutter-width-desk;
-                 ~"--desk");
+    .addColumns(@grid-desk);
+    .gridMods(@grid-desk);
 }
 
 @import "responsive-visibility";

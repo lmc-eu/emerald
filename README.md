@@ -1,4 +1,4 @@
-# Emerald
+# Emerald v0.7.0-rc
 
 [lmc-eu.github.io/emerald/](http://lmc-eu.github.io/emerald/)
 

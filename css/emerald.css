@@ -1,6 +1,4 @@
-/*
- *  Emerald
- */
+/*! Emerald v0.7.0 | MIT Licence | http://lmc-eu.github.io/emerald/ */
 .wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -32,29 +30,12 @@
   padding-right: 3vw;
   padding-left: 3vw;
 }
-.grid--obv--palm {
-  direction: ltr;
+.wrapper {
+  padding-right: 3vw;
+  padding-left: 3vw;
 }
-.grid--rev--palm {
-  direction: rtl;
-}
-.grid--left--palm {
-  text-align: left;
-}
-.grid--right--palm {
-  text-align: right;
-}
-.grid--center--palm {
-  text-align: center;
-}
-.grid--top--palm > .grid__item {
-  vertical-align: top;
-}
-.grid--middle--palm > .grid__item {
-  vertical-align: middle;
-}
-.grid--bottom--palm > .grid__item {
-  vertical-align: bottom;
+.wrapper {
+  width: 96vw;
 }
 .e-8--palm {
   width: 96vw;
@@ -140,168 +121,31 @@
 .e-pull-0--palm {
   margin-right: 0;
 }
-.wrapper {
-  width: 96vw;
-  padding-right: 3vw;
-  padding-left: 3vw;
+.grid--obv--palm {
+  direction: ltr;
+}
+.grid--rev--palm {
+  direction: rtl;
+}
+.grid--left--palm {
+  text-align: left;
+}
+.grid--right--palm {
+  text-align: right;
+}
+.grid--center--palm {
+  text-align: center;
+}
+.grid--top--palm > .grid__item {
+  vertical-align: top;
+}
+.grid--middle--palm > .grid__item {
+  vertical-align: middle;
+}
+.grid--bottom--palm > .grid__item {
+  vertical-align: bottom;
 }
 @media only screen and (min-width: 768px) {
-  .e-16--palm {
-    width: 640px;
-  }
-  .e-push-16--palm {
-    margin-left: 640px;
-  }
-  .e-pull-16--palm {
-    margin-right: 640px;
-  }
-  .e-15--palm {
-    width: 600px;
-  }
-  .e-push-15--palm {
-    margin-left: 600px;
-  }
-  .e-pull-15--palm {
-    margin-right: 600px;
-  }
-  .e-14--palm {
-    width: 560px;
-  }
-  .e-push-14--palm {
-    margin-left: 560px;
-  }
-  .e-pull-14--palm {
-    margin-right: 560px;
-  }
-  .e-13--palm {
-    width: 520px;
-  }
-  .e-push-13--palm {
-    margin-left: 520px;
-  }
-  .e-pull-13--palm {
-    margin-right: 520px;
-  }
-  .e-12--palm {
-    width: 480px;
-  }
-  .e-push-12--palm {
-    margin-left: 480px;
-  }
-  .e-pull-12--palm {
-    margin-right: 480px;
-  }
-  .e-11--palm {
-    width: 440px;
-  }
-  .e-push-11--palm {
-    margin-left: 440px;
-  }
-  .e-pull-11--palm {
-    margin-right: 440px;
-  }
-  .e-10--palm {
-    width: 400px;
-  }
-  .e-push-10--palm {
-    margin-left: 400px;
-  }
-  .e-pull-10--palm {
-    margin-right: 400px;
-  }
-  .e-9--palm {
-    width: 360px;
-  }
-  .e-push-9--palm {
-    margin-left: 360px;
-  }
-  .e-pull-9--palm {
-    margin-right: 360px;
-  }
-  .e-8--palm {
-    width: 320px;
-  }
-  .e-push-8--palm {
-    margin-left: 320px;
-  }
-  .e-pull-8--palm {
-    margin-right: 320px;
-  }
-  .e-7--palm {
-    width: 280px;
-  }
-  .e-push-7--palm {
-    margin-left: 280px;
-  }
-  .e-pull-7--palm {
-    margin-right: 280px;
-  }
-  .e-6--palm {
-    width: 240px;
-  }
-  .e-push-6--palm {
-    margin-left: 240px;
-  }
-  .e-pull-6--palm {
-    margin-right: 240px;
-  }
-  .e-5--palm {
-    width: 200px;
-  }
-  .e-push-5--palm {
-    margin-left: 200px;
-  }
-  .e-pull-5--palm {
-    margin-right: 200px;
-  }
-  .e-4--palm {
-    width: 160px;
-  }
-  .e-push-4--palm {
-    margin-left: 160px;
-  }
-  .e-pull-4--palm {
-    margin-right: 160px;
-  }
-  .e-3--palm {
-    width: 120px;
-  }
-  .e-push-3--palm {
-    margin-left: 120px;
-  }
-  .e-pull-3--palm {
-    margin-right: 120px;
-  }
-  .e-2--palm {
-    width: 80px;
-  }
-  .e-push-2--palm {
-    margin-left: 80px;
-  }
-  .e-pull-2--palm {
-    margin-right: 80px;
-  }
-  .e-1--palm {
-    width: 40px;
-  }
-  .e-push-1--palm {
-    margin-left: 40px;
-  }
-  .e-pull-1--palm {
-    margin-right: 40px;
-  }
-  .e-full--palm {
-    width: 100%;
-  }
-  .e-0--palm {
-    display: none;
-  }
-  .e-push-0--palm {
-    margin-left: 0;
-  }
-  .e-pull-0--palm {
-    margin-right: 0;
-  }
   .grid {
     margin-right: -10px;
     margin-left: -10px;
@@ -311,29 +155,9 @@
     padding-right: 10px;
     padding-left: 10px;
   }
-  .grid--obv {
-    direction: ltr;
-  }
-  .grid--rev {
-    direction: rtl;
-  }
-  .grid--left {
-    text-align: left;
-  }
-  .grid--right {
-    text-align: right;
-  }
-  .grid--center {
-    text-align: center;
-  }
-  .grid--top > .grid__item {
-    vertical-align: top;
-  }
-  .grid--middle > .grid__item {
-    vertical-align: middle;
-  }
-  .grid--bottom > .grid__item {
-    vertical-align: bottom;
+  .wrapper {
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .e-16 {
     width: 640px;
@@ -493,43 +317,191 @@
   }
   .wrapper {
     width: 640px;
-    padding-right: 10px;
-    padding-left: 10px;
+  }
+  .e-16 {
+    width: 640px;
+  }
+  .e-push-16 {
+    margin-left: 640px;
+  }
+  .e-pull-16 {
+    margin-right: 640px;
+  }
+  .e-15 {
+    width: 600px;
+  }
+  .e-push-15 {
+    margin-left: 600px;
+  }
+  .e-pull-15 {
+    margin-right: 600px;
+  }
+  .e-14 {
+    width: 560px;
+  }
+  .e-push-14 {
+    margin-left: 560px;
+  }
+  .e-pull-14 {
+    margin-right: 560px;
+  }
+  .e-13 {
+    width: 520px;
+  }
+  .e-push-13 {
+    margin-left: 520px;
+  }
+  .e-pull-13 {
+    margin-right: 520px;
+  }
+  .e-12 {
+    width: 480px;
+  }
+  .e-push-12 {
+    margin-left: 480px;
+  }
+  .e-pull-12 {
+    margin-right: 480px;
+  }
+  .e-11 {
+    width: 440px;
+  }
+  .e-push-11 {
+    margin-left: 440px;
+  }
+  .e-pull-11 {
+    margin-right: 440px;
+  }
+  .e-10 {
+    width: 400px;
+  }
+  .e-push-10 {
+    margin-left: 400px;
+  }
+  .e-pull-10 {
+    margin-right: 400px;
+  }
+  .e-9 {
+    width: 360px;
+  }
+  .e-push-9 {
+    margin-left: 360px;
+  }
+  .e-pull-9 {
+    margin-right: 360px;
+  }
+  .e-8 {
+    width: 320px;
+  }
+  .e-push-8 {
+    margin-left: 320px;
+  }
+  .e-pull-8 {
+    margin-right: 320px;
+  }
+  .e-7 {
+    width: 280px;
+  }
+  .e-push-7 {
+    margin-left: 280px;
+  }
+  .e-pull-7 {
+    margin-right: 280px;
+  }
+  .e-6 {
+    width: 240px;
+  }
+  .e-push-6 {
+    margin-left: 240px;
+  }
+  .e-pull-6 {
+    margin-right: 240px;
+  }
+  .e-5 {
+    width: 200px;
+  }
+  .e-push-5 {
+    margin-left: 200px;
+  }
+  .e-pull-5 {
+    margin-right: 200px;
+  }
+  .e-4 {
+    width: 160px;
+  }
+  .e-push-4 {
+    margin-left: 160px;
+  }
+  .e-pull-4 {
+    margin-right: 160px;
+  }
+  .e-3 {
+    width: 120px;
+  }
+  .e-push-3 {
+    margin-left: 120px;
+  }
+  .e-pull-3 {
+    margin-right: 120px;
+  }
+  .e-2 {
+    width: 80px;
+  }
+  .e-push-2 {
+    margin-left: 80px;
+  }
+  .e-pull-2 {
+    margin-right: 80px;
+  }
+  .e-1 {
+    width: 40px;
+  }
+  .e-push-1 {
+    margin-left: 40px;
+  }
+  .e-pull-1 {
+    margin-right: 40px;
+  }
+  .e-full {
+    width: 100%;
+  }
+  .e-0 {
+    display: none;
+  }
+  .e-push-0 {
+    margin-left: 0;
+  }
+  .e-pull-0 {
+    margin-right: 0;
+  }
+  .grid--obv {
+    direction: ltr;
+  }
+  .grid--rev {
+    direction: rtl;
+  }
+  .grid--left {
+    text-align: left;
+  }
+  .grid--right {
+    text-align: right;
+  }
+  .grid--center {
+    text-align: center;
+  }
+  .grid--top > .grid__item {
+    vertical-align: top;
+  }
+  .grid--middle > .grid__item {
+    vertical-align: middle;
+  }
+  .grid--bottom > .grid__item {
+    vertical-align: bottom;
   }
 }
 @media only screen and (min-width: 1020px) {
-  .grid {
-    margin-right: -10px;
-    margin-left: -10px;
-  }
-  .grid__item {
-    display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  .grid--obv--desk {
-    direction: ltr;
-  }
-  .grid--rev--desk {
-    direction: rtl;
-  }
-  .grid--left--desk {
-    text-align: left;
-  }
-  .grid--right--desk {
-    text-align: right;
-  }
-  .grid--center--desk {
-    text-align: center;
-  }
-  .grid--top--desk > .grid__item {
-    vertical-align: top;
-  }
-  .grid--middle--desk > .grid__item {
-    vertical-align: middle;
-  }
-  .grid--bottom--desk > .grid__item {
-    vertical-align: bottom;
+  .wrapper {
+    width: 1000px;
   }
   .e-25--desk {
     width: 1000px;
@@ -768,10 +740,29 @@
   .e-pull-0--desk {
     margin-right: 0;
   }
-  .wrapper {
-    width: 1000px;
-    padding-right: 10px;
-    padding-left: 10px;
+  .grid--obv--desk {
+    direction: ltr;
+  }
+  .grid--rev--desk {
+    direction: rtl;
+  }
+  .grid--left--desk {
+    text-align: left;
+  }
+  .grid--right--desk {
+    text-align: right;
+  }
+  .grid--center--desk {
+    text-align: center;
+  }
+  .grid--top--desk > .grid__item {
+    vertical-align: top;
+  }
+  .grid--middle--desk > .grid__item {
+    vertical-align: middle;
+  }
+  .grid--bottom--desk > .grid__item {
+    vertical-align: bottom;
   }
 }
 .visible--palm {

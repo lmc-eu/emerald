@@ -8,6 +8,9 @@ module.exports = function(grunt) {
         // Task configuration.
         less: {
             dist: {
+                options: {
+                    strictMath: true
+                },
                 files: {
                     'css/emerald.css': 'less/emerald.less'
                 }

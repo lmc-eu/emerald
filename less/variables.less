@@ -1,20 +1,41 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+// 
 // For each device size (palm, lap, desk) specify this parametres
 // @screen-*            Viewport breakpoint
 // @columns-count-*     Number of grid sizes to generate
 // @column-width-*      Single column width
 // @gutter-width-*      Width of the gutter between columns
+// @modifier-*          Width of the gutter between columns
+// --------------------------------------------------------------------------
 
 // As Emerald is mobile-first no @screen-palm is needed
-@columns-count-palm: 8;
-@column-width-palm: 6vw;
-@gutter-width-palm: 6vw;
+@columns-count-palm:    8;
+@column-width-palm:     6vw;
+@gutter-width-palm:     6vw;
+@modifier-palm:         ~"--palm";
 
-@screen-lap: 768px;
-@columns-count-lap: 16;
-@column-width-lap: 20px;
-@gutter-width-lap: 20px;
+@screen-lap:            768px;
+@columns-count-lap:     16;
+@column-width-lap:      20px;
+@gutter-width-lap:      20px;
+@modifier-lap:          ~"";
 
-@screen-desk: 1020px;
-@columns-count-desk: 25;
-@column-width-desk: 20px;
-@gutter-width-desk: 20px;
+@screen-desk:           1020px;
+@columns-count-desk:    25;
+@column-width-desk:     20px;
+@gutter-width-desk:     20px;
+@modifier-desk:         ~"--desk";
+
+// 
+// For easier use we make an "array" of some values for each device.
+// The format is quite obvious.
+// --------------------------------------------------------------------------
+@grid-palm: @columns-count-palm @column-width-palm
+            @gutter-width-palm @modifier-palm;
+@grid-lap:  @columns-count-lap @column-width-lap
+            @gutter-width-lap @modifier-lap;
+@grid-desk: @columns-count-desk @column-width-desk
+            @gutter-width-desk @modifier-desk;
