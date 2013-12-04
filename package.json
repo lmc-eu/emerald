@@ -1,6 +1,6 @@
 {
   "name": "emerald",
-  "version": "0.7.0",
+  "version": "1.0.0-rc1",
   "description": "Emerald is a responsive grid system written in LESS",
     "keywords": [
     "css",

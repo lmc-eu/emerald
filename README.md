@@ -1,8 +1,8 @@
-# Emerald v0.7.0-rc
+# Emerald v1.0.0-rc1
 
 [lmc-eu.github.io/emerald/](http://lmc-eu.github.io/emerald/)
 
-Emerald is a responsive grid system written in LESS
+Emerald is a pragmatic responsive grid system in LESS 
 
 * Responsive
 * OOCSS
@@ -13,6 +13,7 @@ Emerald is a responsive grid system written in LESS
 * Block-element based
 * (= no floats, clears or rows)
 * Configurable
+* 1.2 kB (minified and gzipped)
 
 ## Warning
 **This project is not yet ready for a (general) production use!**

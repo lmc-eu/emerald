@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         less: {
             dist: {
                 options: {
-                    strictMath: true
+                    strictMath: true,
+                    strictUnits: true
                 },
                 files: {
                     'css/emerald.css': 'less/emerald.less'
