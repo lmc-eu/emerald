@@ -205,211 +205,115 @@
   padding-left: 10px;
 }
 
-.e-16 {
-  width: 640px;
-}
-
-.e-push-16 {
-  margin-left: 640px;
-}
-
-.e-pull-16 {
-  margin-right: 640px;
-}
-
-.e-15 {
-  width: 600px;
-}
-
-.e-push-15 {
-  margin-left: 600px;
-}
-
-.e-pull-15 {
-  margin-right: 600px;
-}
-
-.e-14 {
-  width: 560px;
-}
-
-.e-push-14 {
-  margin-left: 560px;
-}
-
-.e-pull-14 {
-  margin-right: 560px;
-}
-
-.e-13 {
-  width: 520px;
-}
-
-.e-push-13 {
-  margin-left: 520px;
-}
-
-.e-pull-13 {
-  margin-right: 520px;
-}
-
-.e-12 {
-  width: 480px;
-}
-
-.e-push-12 {
-  margin-left: 480px;
-}
-
-.e-pull-12 {
-  margin-right: 480px;
-}
-
-.e-11 {
-  width: 440px;
-}
-
-.e-push-11 {
-  margin-left: 440px;
-}
-
-.e-pull-11 {
-  margin-right: 440px;
-}
-
-.e-10 {
-  width: 400px;
-}
-
-.e-push-10 {
-  margin-left: 400px;
-}
-
-.e-pull-10 {
-  margin-right: 400px;
-}
-
-.e-9 {
-  width: 360px;
-}
-
-.e-push-9 {
-  margin-left: 360px;
-}
-
-.e-pull-9 {
-  margin-right: 360px;
-}
-
-.e-8 {
+.e-8--palm {
   width: 320px;
 }
 
-.e-push-8 {
+.e-push-8--palm {
   margin-left: 320px;
 }
 
-.e-pull-8 {
+.e-pull-8--palm {
   margin-right: 320px;
 }
 
-.e-7 {
+.e-7--palm {
   width: 280px;
 }
 
-.e-push-7 {
+.e-push-7--palm {
   margin-left: 280px;
 }
 
-.e-pull-7 {
+.e-pull-7--palm {
   margin-right: 280px;
 }
 
-.e-6 {
+.e-6--palm {
   width: 240px;
 }
 
-.e-push-6 {
+.e-push-6--palm {
   margin-left: 240px;
 }
 
-.e-pull-6 {
+.e-pull-6--palm {
   margin-right: 240px;
 }
 
-.e-5 {
+.e-5--palm {
   width: 200px;
 }
 
-.e-push-5 {
+.e-push-5--palm {
   margin-left: 200px;
 }
 
-.e-pull-5 {
+.e-pull-5--palm {
   margin-right: 200px;
 }
 
-.e-4 {
+.e-4--palm {
   width: 160px;
 }
 
-.e-push-4 {
+.e-push-4--palm {
   margin-left: 160px;
 }
 
-.e-pull-4 {
+.e-pull-4--palm {
   margin-right: 160px;
 }
 
-.e-3 {
+.e-3--palm {
   width: 120px;
 }
 
-.e-push-3 {
+.e-push-3--palm {
   margin-left: 120px;
 }
 
-.e-pull-3 {
+.e-pull-3--palm {
   margin-right: 120px;
 }
 
-.e-2 {
+.e-2--palm {
   width: 80px;
 }
 
-.e-push-2 {
+.e-push-2--palm {
   margin-left: 80px;
 }
 
-.e-pull-2 {
+.e-pull-2--palm {
   margin-right: 80px;
 }
 
-.e-1 {
+.e-1--palm {
   width: 40px;
 }
 
-.e-push-1 {
+.e-push-1--palm {
   margin-left: 40px;
 }
 
-.e-pull-1 {
+.e-pull-1--palm {
   margin-right: 40px;
 }
 
-.e-full {
+.e-full--palm {
   width: 100%;
 }
 
-.e-0 {
+.e-0--palm {
   display: none;
 }
 
-.e-push-0 {
+.e-push-0--palm {
   margin-left: 0;
 }
 
-.e-pull-0 {
+.e-pull-0--palm {
   margin-right: 0;
 }
 

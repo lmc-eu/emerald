@@ -1,8 +1,24 @@
 // ==========================================================================
 // Grid
 // ==========================================================================
+// Provides:
+//     .initializeGrid ();
+//     .updateGrid (@grid-size);
+//     .gridMods (@grid-size);
+// ==========================================================================
 
+//
+// In the grid initialization we set the rules that are not to be overwrited
+// in the stylesheet, which gives them a special standing.
+// The grid takes advantage of behaviour of inline-block elements in the
+// browser. It is convenient to set box-sizing to border-box to some classes
+// because we operate with their width and padding in the next.
+// If not overwriten with a grid class a grid item has a full width (1).
+// With the same principle the grid is by default aligned to the left (2),
+// top (3) and following the order as in the markup (4).
+// --------------------------------------------------------------------------
 .initializeGrid () {
+
     .wrapper {
         margin-right: auto;
         margin-left: auto;
@@ -15,12 +31,13 @@
         list-style: none;
         margin: 0;
         padding: 0;
+
         &__item {
             display: inline-block;
-            width: 100%;
-            text-align: left;
-            vertical-align: top;
-            direction: ltr;
+            width: 100%;                    // (1)
+            text-align: left;               // (2)
+            vertical-align: top;            // (3)
+            direction: ltr;                 // (4)
             -webkit-box-sizing: border-box;
                -moz-box-sizing: border-box;
                     box-sizing: border-box;
@@ -28,9 +45,39 @@
     }
 }
 
-.gridMods (@grid-size) {
+//
+// The grid is expected to change at many breakpoint. At each time calling
+// this to recalculate the correct margins and paddings.
+// --------------------------------------------------------------------------
+.updateGrid (@grid-size) {
+
+    @column-width: extract(@grid-size, 2);
+    @gutter-width: extract(@grid-size, 3);
+
+    .grid {
+        margin-right: (@gutter-width / -2);
+        margin-left: (@gutter-width / -2);
+        &__item {
+            display: inline-block;
+            padding-right: (@gutter-width / 2);
+            padding-left: (@gutter-width / 2);
+        }
+    }
+
+    .wrapper {
+        padding-right: (@gutter-width / 2);
+        padding-left: (@gutter-width / 2);
+    }
+}
+
+//
+// All special grid features, or as we call them - modifications, can be set
+// or reset to the default at any device independetly.
+// --------------------------------------------------------------------------
+.modsOfGrid (@grid-size) {
 
     @modifier: extract(@grid-size, 4);
+
     .grid {
         // Obverse
         &--obv@{modifier} {
@@ -81,22 +128,3 @@
     }
 }
 
-.updateGrid (@grid-size) {
-    @column-width: extract(@grid-size, 2);
-    @gutter-width: extract(@grid-size, 3);
-
-    .grid {
-        margin-right: (@gutter-width / -2);
-        margin-left: (@gutter-width / -2);
-        &__item {
-            display: inline-block;
-            padding-right: (@gutter-width / 2);
-            padding-left: (@gutter-width / 2);
-        }
-    }
-
-    .wrapper {
-        padding-right: (@gutter-width / 2);
-        padding-left: (@gutter-width / 2);
-    }
-}

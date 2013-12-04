@@ -12,33 +12,44 @@
 @import "columns";
 
 //
-// The first use of the grid, everything has to be set up.
+// The first use of the grid, everything has to be set up:
+//     (1) Set the basics of the grid system. No widths or sizes needed.
+//     (2) Update (well, in fact, set) the paddings and margins of wrappper,
+//         grid, and grid items using defined widths.
+//     (3) Add the first set of column classes.
+//     (4) Grid modifications for the first device.
 // --------------------------------------------------------------------------
-.initializeGrid();
-.updateGrid(@grid-palm);
-.addColumns(@grid-palm);
-.gridMods(@grid-palm);
+.initializeGrid();        // (1)
+.updateGrid(@grid-palm);  // (2)
+.addColumns(@grid-palm);  // (3)
+.modsOfGrid(@grid-palm);  // (4)
 
 //
-// When updating to a new device with different column width or gutter width
+// When updating to a new device with DIFFERENT column width or gutter width
 // we must take these four steps:
 //     (1) Update wrappper, grid, and grid items paddings and margins.
 //     (2) Update previously used grid classes (one in this case).
 //     (3) Add grid classes for the new column size.
-//     (4) Grid modifications and visibility for current device.
+//     (4) Grid modifications for the current device.
 // --------------------------------------------------------------------------
 @media only screen and (min-width: @screen-lap) {
 
-    .updateGrid(@grid-lap);     // (1)
-    .updateColumns(@grid-lap);  // (2)
-    .addColumns(@grid-lap);     // (3)
-    .gridMods(@grid-lap);       // (4)
+    .updateGrid(@grid-lap);                 // (1)
+    .updateColumns(@grid-palm; @grid-lap);  // (2)
+    .addColumns(@grid-lap);                 // (3)
+    .modsOfGrid(@grid-lap);                 // (4)
 }
 
+//
+// When updating to a new device with THE SAME column width and gutter width
+// we must take these two steps:
+//     (1) Add grid classes for the new column size.
+//     (2) Grid modifications for the current device.
+// --------------------------------------------------------------------------
 @media only screen and (min-width: @screen-desk) {
 
-    .addColumns(@grid-desk);
-    .gridMods(@grid-desk);
+    .addColumns(@grid-desk);  // (1)
+    .modsOfGrid(@grid-desk);  // (2)
 }
 
 @import "responsive-visibility";

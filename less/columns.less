@@ -1,32 +1,38 @@
 // ==========================================================================
 // Columns
 // ==========================================================================
+// Provides:
+//     .addColumns (@grid-size);
+//     .updateColumns (@grid-from; @grid-to);
+// ==========================================================================
 
 //
 // Recursively creates classes defining individual column sizes, pushes, and
 // pulls. The actual widths are counted according to @column-width and
 // @gutter-width. Going down from @index (the number called with) to zero.
 // Appends the @modifier string to the class name.
+//
+// Private - do not use from outside this file.
 // --------------------------------------------------------------------------
 .buildColumns (@index; @column-width; @gutter-width; @modifier) when (@index > 0) {
 
-	// Grid item class wide @index columns 
+	  // Grid item class wide @index columns 
     .e-@{index}@{modifier} {
-		width: (@index * (@column-width + @gutter-width));
-	}
+		    width: (@index * (@column-width + @gutter-width));
+	  }
 
-	// Create space of @index columns on the left
+	  // Create space of @index columns on the left
     .e-push-@{index}@{modifier} {
-		margin-left: (@index * (@column-width + @gutter-width));
-	}
+		    margin-left: (@index * (@column-width + @gutter-width));
+	  }
 
-	// Create space of @index columns on the right
+	  // Create space of @index columns on the right
     .e-pull-@{index}@{modifier} {
-		margin-right: (@index * (@column-width + @gutter-width));
-	}
+		    margin-right: (@index * (@column-width + @gutter-width));
+	  }
 
     // Call itself with the smaller index
-	.buildColumns((@index - 1); @column-width; @gutter-width; @modifier);
+	  .buildColumns((@index - 1); @column-width; @gutter-width; @modifier);
 }
 
 // The final recursion step
@@ -37,7 +43,7 @@
         width: 100%;
     }
 
-    // Hide on this device (and futher if not overwritted)
+    // Hide on this device (and this device only!)
     .e-0@{modifier} {
         display: none;
     }
@@ -54,10 +60,11 @@
 }
 
 //
-// Interface for easier and more logical use.
-// For @grid-size specification see variables.less.
+// Interface for easier and more logical adding grid item classes.
+// This - right down here - is the meat of this grid system.
 // --------------------------------------------------------------------------
-.addColumns (@grid-size; @update: false) {
+.addColumns (@grid-size) {
+
     // Prepare the data
     @columns-count: extract(@grid-size, 1);
     @column-width: extract(@grid-size, 2);
@@ -72,14 +79,20 @@
     .buildColumns (@columns-count; @column-width; @gutter-width; @modifier);
 }
 
-// Updating columns is currently is the same as adding - up to the calculation
-// of the wrapper width
-.updateColumns (@grid-size) {
-   // Prepare the data
-    @columns-count: extract(@grid-size, 1);
-    @column-width: extract(@grid-size, 2);
-    @gutter-width: extract(@grid-size, 3);
-    @modifier: extract(@grid-size, 4);
+// 
+// Updating, similary to adding, is just an interface to .buildColumns().
+// It generates classes to overwrite previously defined in the @grid-from,
+// from which it takes the number of columns and the modifier, with widths
+// of column and gutter defined in the @grid-to.
+// This enables us to inherit the grid sizes of elements to the next device
+// (or devices when used multiple times).
+// --------------------------------------------------------------------------
+.updateColumns (@grid-from; @grid-to) {
+
+    @columns-count: extract(@grid-from, 1);
+    @column-width: extract(@grid-to, 2);
+    @gutter-width: extract(@grid-to, 3);
+    @modifier: extract(@grid-from, 4);
 
     // Call the creation of columns
     .buildColumns (@columns-count; @column-width; @gutter-width; @modifier); 
