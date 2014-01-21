@@ -751,3 +751,22 @@
     display: none;
   }
 }
+@media print {
+  .grid {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .grid__item {
+    display: inline-block;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .grid__item,
+  .wrapper {
+    width: 100%;
+  }
+}
