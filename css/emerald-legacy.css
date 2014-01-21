@@ -1,4 +1,4 @@
-/*! Emerald v1.1.0 | MIT Licence | git.io/g9_ZaA */
+/*! Emerald v1.1.1 | MIT Licence | git.io/g9_ZaA */
 
 .wrapper {
   margin-right: auto;
@@ -990,14 +990,6 @@
 }
 
 @media print {
-  .visible--print {
-    display: block;
-  }
-
-  .hidden--print {
-    display: none;
-  }
-
   .grid {
     margin-right: 0;
     margin-left: 0;
@@ -1017,5 +1009,13 @@
   .grid__item,
   .wrapper {
     width: 100%;
+  }
+
+  .visible--print {
+    display: block;
+  }
+
+  .hidden--print {
+    display: none;
   }
 }
