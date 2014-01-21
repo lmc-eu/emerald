@@ -1,0 +1,36 @@
+// ==========================================================================
+// Print styles
+// ==========================================================================
+
+// 
+// Everything gets stacked in the order as it is in the code.
+// As other @media rules use 'only screen' while printing only palm and these
+// styles will apply. It follows that '.visible--palm' will be visible and
+// '.hidden--palm' will be hidden. In addition there are '.visible--print'
+// and '.hidden--print' classes with clear meaning.
+//
+// Without this print will be extremely ugly and tens of pages long, because
+// browsers do not know how to interpret viewport units there.
+// --------------------------------------------------------------------------
+
+.visible--print {
+    display: none;
+}
+
+@media print {
+
+    .visible--print {
+        display: block;
+    }
+
+    .hidden--print {
+        display: none;
+    }
+
+    .updateGrid (0 0 0 0);
+    
+    .grid__item,
+    .wrapper {
+        width: 100%;
+    }
+}
