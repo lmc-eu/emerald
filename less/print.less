@@ -7,7 +7,8 @@
 // As other @media rules use 'only screen' while printing only palm and these
 // styles will apply. It follows that '.visible--palm' will be visible and
 // '.hidden--palm' will be hidden. In addition there are '.visible--print'
-// and '.hidden--print' classes with clear meaning.
+// and '.hidden--print' classes with clear meaning. Interestingly the
+// '.hidden--print' class will also work on '.grid__item'!
 //
 // Without this print will be extremely ugly and tens of pages long, because
 // browsers do not know how to interpret viewport units there.
@@ -19,6 +20,13 @@
 
 @media print {
 
+    .updateGrid (0 0 0 0);
+
+    .grid__item,
+    .wrapper {
+        width: 100%;
+    }
+
     .visible--print {
         display: block;
     }
@@ -27,10 +35,4 @@
         display: none;
     }
 
-    .updateGrid (0 0 0 0);
-    
-    .grid__item,
-    .wrapper {
-        width: 100%;
-    }
 }
