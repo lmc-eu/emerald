@@ -1,13 +1,12 @@
 {
   "name": "emerald",
-  "version": "1.0.0-rc1",
+  "version": "1.0.0",
   "main": [
     "css/emerald.css",
-    "css/emerald-legacy.css",
     "less/emerald.less",
-    "less/variables.less",
-    "less/grid.less",
-    "less/columns.less",
-    "less/responsive-visibility.less"
+    "js/emerald.js"
+  ],
+  "ignore": [
+    "Gruntfile.js"
   ]
 }
