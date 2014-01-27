@@ -1,4 +1,4 @@
-/*! Emerald v1.1.1 | MIT Licence | git.io/g9_ZaA */
+/*! Emerald v1.1.2 | MIT Licence | git.io/g9_ZaA */
 
 .wrapper {
   margin-right: auto;
@@ -1008,6 +1008,7 @@
 
   .grid__item,
   .wrapper {
+    display: block;
     width: 100%;
   }
 
