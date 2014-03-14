@@ -43,11 +43,6 @@
         width: 100%;
     }
 
-    // Hide on this device (and this device only!)
-    .e-0@{modifier} {
-        display: none;
-    }
-
     // Reset to no-pushing
     .e-push-0@{modifier} {
         margin-left: 0;
@@ -77,6 +72,11 @@
     }
     // Call the creation of columns
     .buildColumns (@columns-count; @column-width; @gutter-width; @modifier);
+
+    // Hide on this device (and this device only!)
+    .e-0@{modifier} {
+        display: none;
+    }
 }
 
 // 

@@ -1,4 +1,4 @@
-# Emerald v1.1.2
+# Emerald v1.1.3
 
 [lmc-eu.github.io/emerald/](http://lmc-eu.github.io/emerald/)
 
@@ -62,6 +62,9 @@ This grid system was inspired by:
 * [yui/pure](http://github.com/yui/pure)
 
 ## Changelog
+* v1.1.3    Fix a bug with .e-0 classes overwriting on higher devices
+* v1.1.2    Fix a printing problem in FF
+* v1.1.1    Hiding .grid__item in print
 * v1.1.0    Add print styles (fixes [#6](https://github.com/lmc-eu/emerald/issues/6))
 * v1.0.0    Initial release, production ready
 
