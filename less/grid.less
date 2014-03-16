@@ -15,9 +15,9 @@
 // because we operate with their width and padding in the next.
 // Since whitespace in the markup breaks the grid consisting of inline blocks
 // with precisely defined width, we need to reduce the font size of the grid
-// to (nearly) 0 (1) and then set it back to its original value in grid items
-// (2). As rem units are not supported in legacy browsers, we also need to
-// define a fallback using absolute units (3).
+// to 0 (1) and then set it back to its original value in grid items (2). As
+// rem units are not supported in legacy browsers, we also need to define
+// a fallback using absolute units (3).
 // If not overwritten with a grid class a grid item has a full width (4).
 // With the same principle the grid is aligned to the left by default (5),
 // top (6) and following the order as in the markup (7).
@@ -33,7 +33,7 @@
     }
 
     .grid {
-        font-size: 0.1px; // (1)
+        font-size: 0; // (1)
         line-height: 1;
         list-style: none;
         margin: 0;
