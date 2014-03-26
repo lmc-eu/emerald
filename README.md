@@ -15,12 +15,6 @@ Emerald is a pragmatic responsive grid system in LESS
 * Configurable
 * 1.2 kB (minified and gzipped)
 
-## Warning
-**This project is not yet ready for a (general) production use!**
-
-In compliance with [SemVer](http://semver.org/), `v0.x.y` is for initial development. *"Anything may change at any time."*.
-Expect more generalization and documentation in `v1.0.0`.
-
 ## How to use
 Install via *Bower*
 
