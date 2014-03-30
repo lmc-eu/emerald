@@ -1,25 +1,25 @@
 {
   "name": "emerald",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Emerald is a responsive grid system written in LESS",
-    "keywords": [
+  "keywords": [
     "css",
     "grid",
     "less"
   ],
   "author": "Robin Pokorný <robin.pokorny@lmc.eu>",
   "homepage": "http://git.io/g9_ZaA",
+  "main": "js/emerald.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/lmc-eu/emerald.git"
   },
+  "bugs": "https://github.com/lmc-eu/emerald/issues",
   "engines": {
     "node": ">= 0.10.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-legacssy": "~0.3.1",
-    "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-csslint": "~0.2.0",
     "grunt-contrib-less": "~0.11.0",
     "matchdep": "~0.3.0"

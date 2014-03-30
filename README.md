@@ -1,4 +1,4 @@
-# Emerald v1.1.3
+# Emerald v1.2.0
 
 [lmc-eu.github.io/emerald/](http://lmc-eu.github.io/emerald/)
 
@@ -20,7 +20,12 @@ Install via *Bower*
 
 `$ bower install emerald`
 
-Either include source *LESS* files into your project (recommended) or use compiled minified *CSS*.
+Either include source *LESS* files into your project (recommended) or use compiled *CSS*.
+
+```less
+// main.less
+@import "emerald/less/emerald";
+```
 
 ## Browser support
 
@@ -28,19 +33,14 @@ Emerald grid system is tested in the latest versions of the major browsers on th
 
 ### Support for `vw` units
 Android browser does not support `vw` units. Load `emerald.js` at the
-bootom of the page:
+bottom of the page:
 
 ```html
 <script src="js/emerald.js"></script>
 ```
 
 ### Internet Explorer 8
-Legacy browser are supported by [grunt-legacssy](https://github.com/robinpokorny/grunt-legacssy). Load the grid using:
-
-```css
-<!--[if lte IE 8]>     <link rel="stylesheet" href="css/emerald-legacy.min.css"> <![endif]-->
-<!--[if gt IE 8]><!--> <link rel="stylesheet" href="css/emerald.min.css"> <!--<![endif]-->
-```
+Legacy browser are supported by [grunt-legacssy](https://github.com/robinpokorny/grunt-legacssy).
 
 ## The name
 Please note that the name *Emerald* does not refer to the gemstone of that name but to a [diamond cut](http://www.lumeradiamonds.com/diamond-education/emerald-cut-diamond) *"originally developed for the cutting of emeralds."*
@@ -56,6 +56,7 @@ This grid system was inspired by:
 * [yui/pure](http://github.com/yui/pure)
 
 ## Changelog
+* v1.2.0    Code refactoring, fix typos, remove legacy and minimised CSSs
 * v1.1.3    Fix a bug with .e-0 classes overwriting on higher devices
 * v1.1.2    Fix a printing problem in FF
 * v1.1.1    Hiding .grid__item in print

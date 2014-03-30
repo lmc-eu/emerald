@@ -8,12 +8,12 @@
 // ==========================================================================
 
 //
-// In the grid initialization we set the rules that are not to be overwrited
+// In the grid initialization we set the rules that are not to be overwritten
 // in the stylesheet, which gives them a special standing.
 // The grid takes advantage of behaviour of inline-block elements in the
 // browser. It is convenient to set box-sizing to border-box to some classes
 // because we operate with their width and padding in the next.
-// If not overwriten with a grid class a grid item has a full width (1).
+// If not overwritten with a grid class a grid item has a full width (1).
 // With the same principle the grid is by default aligned to the left (2),
 // top (3) and following the order as in the markup (4).
 // --------------------------------------------------------------------------
@@ -46,8 +46,8 @@
 }
 
 //
-// The grid is expected to change at many breakpoint. At each time calling
-// this to recalculate the correct margins and paddings.
+// The grid is expected to change at many breakpoints. At each time call this
+// to recalculate the correct margin and padding.
 // --------------------------------------------------------------------------
 .updateGrid (@grid-size) {
 
@@ -71,7 +71,7 @@
 
 //
 // All special grid features, or as we call them - modifications, can be set
-// or reset to the default at any device independetly.
+// or reset to the default at any device independently.
 // --------------------------------------------------------------------------
 .modsOfGrid (@grid-size) {
 
