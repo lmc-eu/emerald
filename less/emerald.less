@@ -36,20 +36,22 @@
 // --------------------------------------------------------------------------
 @media only screen and (min-width: @screen-lap) {
 
-  .updateGrid(@grid-lap);                 // (1)
-  .updateColumns(@grid-palm; @grid-lap);  // (2)
-  .addColumns(@grid-lap);                 // (3)
-  .modsOfGrid(@grid-lap);                 // (4)
+    .updateGrid(@grid-lap);                 // (1)
+    .updateColumns(@grid-palm; @grid-lap);  // (2)
+    .addColumns(@grid-lap);                 // (3)
+    .modsOfGrid(@grid-lap);                 // (4)
 }
 
 //
 // When updating to a new device with THE SAME column width and gutter width
 // we must take these two steps:
-//     (1) Add grid classes for the new column size.
-//     (2) Grid modifications for the current device.
+//     (1) Show hidden grid items
+//     (2) Add grid classes for the new column size.
+//     (3) Grid modifications for the current device.
 // --------------------------------------------------------------------------
 @media only screen and (min-width: @screen-desk) {
 
-  .addColumns(@grid-desk);  // (1)
-  .modsOfGrid(@grid-desk);  // (2)
+    .freshenGrid();           // (1)
+    .addColumns(@grid-desk);  // (2)
+    .modsOfGrid(@grid-desk);  // (3)
 }
