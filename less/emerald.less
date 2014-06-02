@@ -11,7 +11,6 @@
 @import "grid";
 @import "columns";
 @import "responsive-visibility";
-@import "print";
 
 //
 // The first use of the grid, everything has to be set up:
@@ -55,3 +54,8 @@
     .addColumns(@grid-desk);  // (2)
     .modsOfGrid(@grid-desk);  // (3)
 }
+
+//
+// Print styles are imported last to override definitions correctly
+// --------------------------------------------------------------------------
+@import "print";
