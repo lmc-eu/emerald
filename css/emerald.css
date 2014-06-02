@@ -1,4 +1,4 @@
-/*! Emerald v1.2.0 | MIT Licence | git.io/g9_ZaA */
+/*! Emerald v1.2.2 | MIT Licence | git.io/g9_ZaA */
 .visible--palm {
   display: block;
 }
@@ -54,37 +54,6 @@
     display: block;
   }
   .hidden--desk {
-    display: none;
-  }
-}
-.visible--print {
-  display: none;
-}
-@media print {
-  .grid {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .grid__item {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .grid__item {
-    display: inline-block;
-  }
-  .wrapper {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .grid__item,
-  .wrapper {
-    display: block;
-    width: 100%;
-  }
-  .visible--print {
-    display: block;
-  }
-  .hidden--print {
     display: none;
   }
 }
@@ -784,5 +753,36 @@
   }
   .grid--bottom--desk > .grid__item {
     vertical-align: bottom;
+  }
+}
+.visible--print {
+  display: none;
+}
+@media print {
+  .grid {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .grid__item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .grid__item {
+    display: inline-block;
+  }
+  .wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .grid__item,
+  .wrapper {
+    display: block;
+    width: 100%;
+  }
+  .visible--print {
+    display: block;
+  }
+  .hidden--print {
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-# Emerald v1.2.1
+# Emerald v1.2.2
 
 [lmc-eu.github.io/emerald/](http://lmc-eu.github.io/emerald/)
 
