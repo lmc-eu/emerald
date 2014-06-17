@@ -18,22 +18,8 @@
    * Viewport units support test
    * Based on Modernizr: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css/vwunit.js
    */
-  var supportsVw = (function () {
-      var elem, width, compStyle, compWidth;
-      elem = document.createElement("div");
-      elem.style.width = '50vw';
-      document.body.appendChild(elem);
-
-      width = parseInt(window.innerWidth / 2, 10);
-      compStyle = window.getComputedStyle ?
-        window.getComputedStyle(elem, null) :
-        elem.currentStyle;
-      compWidth = parseInt(compStyle.width, 10);
-
-      document.body.removeChild(elem);
-
-      return width === compWidth;
-    }()),
+  // Quick and dirty fix to the iOS rotation bug
+  var supportsVw = false,
 
   /*
    * Define parameters and the emulating function
