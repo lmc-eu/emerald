@@ -48,7 +48,7 @@
       width = parseInt(window.innerWidth, 10);
 
       // Do not continue if not on mobile
-      if (width > screenLap) {
+      if (width >= screenLap) {
         headStyle.innerHTML = "";
         return;
       }
