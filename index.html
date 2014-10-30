@@ -1,370 +1,164 @@
+---
+---
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>Emerald</title>
+<head>
+    <meta charset="utf-8">
+    <title>Emerald &ndash; a responsive grid system written in LESS</title>
 
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/emerald-legacy.min.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/emerald.min.css">
-        <!--<![endif]-->
-        <link href='http://fonts.googleapis.com/css?family=Poiret+One|Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/docs.css">
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    </head>
-    <body>
-        <div class="wrapper header">
-            <div class="grid grid--center--palm">
-                <div class="grid__item e-3--palm e-5 e-6--desk">
-                    <div class="diamond1">
-                        <div class="diamond2">
-                            <div class="diamond3">
-                                <div class="diamond4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="glitter">
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <h1>Emerald<small class="header__subtitle"> v1.2.0</small></h1>
-                <p class="hero">Emerald is a responsive grid system written in LESS</p>
-            </div>
-        </div>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-        <div class="actionbar">
-            <div class="wrapper actionbar__wrapper">
-                <div class="grid grid--center"><!--
-                    --><div class="grid__item e-4--palm">
-                        <a href="demo.html" class="actionbar__btn actionbar__btn--new">Demo</a>
-                      </div><!--
-                    --><div class="grid__item e-4--palm">
-                        <a href="https://github.com/lmc-eu/emerald/archive/master.zip" class="actionbar__btn">Download</a>
-                    </div><!--
-                    --><div class="grid__item e-4--palm">
-                        <a href="https://github.com/lmc-eu/emerald" class="actionbar__btn">View on GitHub</a>
-                    </div><!--
-                    --><div class="grid__item e-4--palm">
-                        <a href="http://twitter.com/intent/tweet?url=http://lmc-eu.github.io/emerald/&amp;text=Emerald - a responsive grid system written in LESS&amp;via=lmc_eu&amp;related=robinpokorny" target="_blank" class="actionbar__btn">Tweet</a>
-                    </div><!--
-                  --></div>
-            </div>
-        </div>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/emerald/css/emerald.css">
+    <style>
+        {% include main.css %}
+        /* http://coolors.co/1cd8d2-93edc7-50a79b-544761-3f5a6c */
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: 'Droid Sans', sans-serif;
+            color: #222927;
+        }
+        a {
+            text-decoration: none;
+            color: #50A79B;
+        }
+        a:hover {
+            border-bottom: 1px solid #3F5A6C;
+            color: #544761;
+        }
+        .logo {
+            text-transform: uppercase;
+            font-size: 1.7em;
+            font-family: 'Poiret One', sans-serif;
+        }
+        .header {
+            padding-top: 1em;
+            color: #ffffff;
 
+            background: #ebfaf6;
+            background: -webkit-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+            background:    -moz-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+            background:     -ms-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+            background:      -o-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+            background:         linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+        }
+        .browser {
+            width: 600px;
+            height: 300px;
+            margin: 40px auto 0;
+            background: #ffffff;
+            border-top: 30px solid #cccccc;
+        }
+        .menu {
+            text-align: right;
+        }
+            .menu__item{
+                display: inline-block;
+                margin-left: 1.5em;
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+                .menu__item:hover {
+                    border: none;
+                }
+        .hero {
+            font-size: 1.8em;
+            margin: 1.4em 0 0 0;
+            text-align: center;
+            font-family: 'Poiret One', sans-serif;
+            font-weight: normal;
+        }
+        .footer {
+            font-size: 0.7em;
+        }
+            .footer__logo:hover {
+                border: none;
+            }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+    <div class="header">
         <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item">
-                    <h2>The philosophy</h2>
-                    <dl>
-                        <dt>Columns and gutters are the same fixed width</dt>
-                        <dd class="e-push-0--palm e-push-1">
-                            <p>Designers love to work with fixed sizes and you will too.</p>
-                            <p>By default Emerald uses for both column and gutter widths <code>6vw</code> (<a href="http://css-tricks.com/viewport-sized-typography/" title="CSS Tricks: Viewport Sized Typography">what is this?</a>) on mobile and <code>20px</code> on tablets and above. In result, a line can accomodate 16 <code>.e-1</code> columns on tablet (or one big <code>.e-16</code> - you know how it works, right?), 8 on mobile, and 25 on desktop.</p>
-                        </dd>
+            <div class="grid grid--middle--palm"><!--
+                --><div class="grid__item e-6">
+                    <span class="logo">Emerald</span>
+                </div><!--
+                --><div class="grid__item e-10 e-19--desk">
+                    <div class="menu">
+                        <a href="#" class="menu__item">Docs</a>
+                        <a href="#" class="menu__item">Quick start</a>
+                        <a href="https://github.com/lmc-eu/emerald" class="menu__item">GitHub</a>
+                    </div>
+                </div><!--
+                --><div class="grid__item">
+                    <h1 class="hero">An opinionated responsive grid system written in LESS.</h1>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="browser"></div>
+                </div><!--
+            --></div>
+        </div>
+    </div>
 
-                        <dt>Mobile-first responsive choreography with OOCSS and BEM</dt>
-                        <dd class="e-push-0--palm e-push-1">
-                            <p>So this element is supposed to be a grid item? Tell it to Emerald by adding <code>.grid__item</code> class.</p>
-                            <p>It should occupy 8 columns on tablet, 12 on desktop? And it should be pushed a little bit to the right on mobile and onward? OK, <code>.e-8 .e-12--desk .e-push-2--palm</code> classes will do the trick.</p>
-                            <p>Want the <code>.grid</code> to be centered? Just add <code>.grid--center</code> class to it. Want it to be centered but not on desktop? Just add <code>.grid--center .grid--left--desk</code> classes to it.</p>
-                        </dd>
+    <div class="wrapper">
+        <div class="grid">
+            <div class="grid__item">
+                <h2>The philosophy</h2>
+                <dl>
+                    <dt>Columns and gutters are the same fixed width</dt>
+                    <dd class="e-push-0--palm e-push-1">
+                        <p>Designers love to work with fixed sizes and you will too.</p>
+                        <p>By default Emerald uses for both column and gutter widths <code>6vw</code> (<a href="http://css-tricks.com/viewport-sized-typography/" title="CSS Tricks: Viewport Sized Typography">what is this?</a>) on mobile and <code>20px</code> on tablets and above. In result, a line can accomodate 16 <code>.e-1</code> columns on tablet (or one big <code>.e-16</code> - you know how it works, right?), 8 on mobile, and 25 on desktop.</p>
+                    </dd>
 
-                        <dt>Heavy configurability</dt>
-                        <dd class="e-push-0--palm e-push-1">
-                            <p>Any number you will see (e.g. the width of a column on desktop) can be easily changed at one predictable place - <code>variables.less</code>. Every device mode has its own set of varibles, that means you can have different measurements on different devices (just be a little cautious).</p>
-                        </dd>
+                    <dt>Mobile-first responsive choreography with OOCSS and BEM</dt>
+                    <dd class="e-push-0--palm e-push-1">
+                        <p>So this element is supposed to be a grid item? Tell it to Emerald by adding <code>.grid__item</code> class.</p>
+                        <p>It should occupy 8 columns on tablet, 12 on desktop? And it should be pushed a little bit to the right on mobile and onward? OK, <code>.e-8 .e-12--desk .e-push-2--palm</code> classes will do the trick.</p>
+                        <p>Want the <code>.grid</code> to be centered? Just add <code>.grid--center</code> class to it. Want it to be centered but not on desktop? Just add <code>.grid--center .grid--left--desk</code> classes to it.</p>
+                    </dd>
 
-                        <dt>Independence &amp; flexibility</dt>
-                        <dd class="e-push-0--palm e-push-1">
-                            <p>Emerald is a grid system. Sure, a great one, but just a part of the whole design. Therefore it is important it plays well with the others.</p>
-                            <p>Most frameworks will not have a problem at all. For example, it is extremely simple to replace <a href="http://getbootstrap.com/">Bootstrap</a>'s grid with Emerald - yet continue to use the rest.</p>
-                            <p>It is your job to create a layout. It is Emarald's job to be so flexible to let you do that. This grid system will not push you any particular way.</p>
-                        </dd>
+                    <dt>Heavy configurability</dt>
+                    <dd class="e-push-0--palm e-push-1">
+                        <p>Any number you will see (e.g. the width of a column on desktop) can be easily changed at one predictable place - <code>variables.less</code>. Every device mode has its own set of varibles, that means you can have different measurements on different devices (just be a little cautious).</p>
+                    </dd>
 
-                        <dt>Rigorousness, i.e., scrupulous accurateness</dt>
-                        <dd class="e-push-0--palm e-push-1">
-                            <p>Or you may call it consistency and desire for high quality.</p>
-                            <p>Every line of code is well-thought-out. No compromises were made, no out-of-scope features added.</p>
-                            <p>As pure as pure mathematics. And equally beautiful.</p>
-                        </dd>
-                    </dl>
-                    <h2>Grid showcase</h2>
-                </div>
+                    <dt>Independence &amp; flexibility</dt>
+                    <dd class="e-push-0--palm e-push-1">
+                        <p>Emerald is a grid system. Sure, a great one, but just a part of the whole design. Therefore it is important it plays well with the others.</p>
+                        <p>Most frameworks will not have a problem at all. For example, it is extremely simple to replace <a href="http://getbootstrap.com/">Bootstrap</a>'s grid with Emerald - yet continue to use the rest.</p>
+                        <p>It is your job to create a layout. It is Emarald's job to be so flexible to let you do that. This grid system will not push you any particular way.</p>
+                    </dd>
+
+                    <dt>Rigorousness, i.e., scrupulous accurateness</dt>
+                    <dd class="e-push-0--palm e-push-1">
+                        <p>Or you may call it consistency and desire for high quality.</p>
+                        <p>Every line of code is well-thought-out. No compromises were made, no out-of-scope features added.</p>
+                        <p>As pure as pure mathematics. And equally beautiful.</p>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item e-1--palm">
-                    <div class="demo">
-                        .e-1--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-2--palm">
-                    <div class="demo">
-                        .e-2--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-3--palm">
-                    <div class="demo">
-                        .e-3--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-4--palm">
-                    <div class="demo">
-                        .e-4--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-5--palm">
-                    <div class="demo">
-                        .e-5--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-6--palm">
-                    <div class="demo">
-                        .e-6--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-7--palm">
-                    <div class="demo">
-                        .e-7--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-8--palm">
-                    <div class="demo">
-                        .e-8--palm
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-9">
-                    <div class="demo">
-                        .e-9
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-10">
-                    <div class="demo">
-                        .e-10
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-11">
-                    <div class="demo">
-                        .e-11
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-12">
-                    <div class="demo">
-                        .e-12
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-13">
-                    <div class="demo">
-                        .e-13
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-14">
-                    <div class="demo">
-                        .e-14
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-15">
-                    <div class="demo">
-                        .e-15
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-16">
-                    <div class="demo">
-                        .e-16
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-17--desk">
-                    <div class="demo">
-                        .e-17--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-18--desk">
-                    <div class="demo">
-                        .e-18--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-19--desk">
-                    <div class="demo">
-                        .e-19--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-20--desk">
-                    <div class="demo">
-                        .e-20--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-21--desk">
-                    <div class="demo">
-                        .e-21--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-22--desk">
-                    <div class="demo">
-                        .e-22--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-23--desk">
-                    <div class="demo">
-                        .e-23--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-24--desk">
-                    <div class="demo">
-                        .e-24--desk
-                    </div>
-                </div><br /><!--
-                --><div class="grid__item e-25--desk">
-                    <div class="demo">
-                        .e-25--desk
-                    </div>
-                </div><br />
+    </div>
 
+    <div class="wrapper footer">
+        <div class="grid grid--middle--palm grid--top">
+            <div class="grid__item e-5--palm e-10 e-16--desk">
+                <span class="logo">Emerald</span>
+                <p class="footer__p">Designed and hand-coded by <a href="https://twitter.com/robinpokorny">@robinpokorny</a> at <a href="https://github.com/lmc-eu">LMC</a>.</p>
+                <p class="footer__p">Licenced under <a href="https://github.com/lmc-eu/emerald/blob/master/LICENSE">MIT</a> licence. View the <a href="https://github.com/lmc-eu/emerald#readme">README</a> file.</p>
+            </div><!--
+            --><div class="grid__item e-3--palm e-4 e-4--desk e-push-2 e-push-5--desk">
+                <a href="http://www.lmc.eu/" class="footer__logo" title="LMC s.r.o."><img src="images/lmc.png" class="e-full--palm"/></a>
             </div>
         </div>
+    </div>
 
-        <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item">
-                    <h2>Grid modifications</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item">
-                    <h3>Default (.grid--obv.grid--left.grid--top)</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item">
-                    <h3>.grid--rev</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid grid--rev--palm">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item">
-                    <h3>.grid--right</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid grid--right--palm">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item">
-                    <h3>.grid--center</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid grid--center--palm">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item">
-                    <h3>.grid--middle</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid grid--middle--palm">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt demo--long">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item">
-                    <h3>.grid--bottom</h3>
-                </div><!--
-                --><div class="grid__item">
-                    <div class="grid grid--bottom--palm">
-                        <div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo demo--alt demo--long">
-                                <strong>A</strong>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item e-3--palm e-7 e-11--desk">
-                            <div class="demo">
-                                <strong>B</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item">
-                    <h2>More documentation to come</h2>
-                    <p>We are developing a new site with a <em>Getting Started</em> section, description of all features, and a lot of examples. Encourige us with a <a href="http://twitter.com/intent/tweet?url=http://lmc-eu.github.io/emerald/&amp;text=Emerald - a responsive grid system written in LESS&amp;via=lmc_eu&amp;related=yarrcat" target="_blank">tweet</a> (we also accept questions and critisism).</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="wrapper footer">
-            <div class="grid grid--middle--palm grid--top">
-                <div class="grid__item e-5--palm e-10 e-16--desk">
-                    <span class="footer__title">Emerald</span>
-                    <p class="footer__p">Designed and hand-coded by <a href="https://twitter.com/robinpokorny">@robinpokorny</a> at <a href="https://github.com/lmc-eu">LMC</a>.</p>
-                    <p class="footer__p">Licenced under <a href="https://github.com/lmc-eu/emerald/blob/master/LICENSE">MIT</a> licence. View the <a href="https://github.com/lmc-eu/emerald#readme">README</a> file.</p>
-                </div><!--
-                --><div class="grid__item e-3--palm e-4 e-4--desk e-push-2 e-push-5--desk">
-                    <a href="http://www.lmc.eu/" class="footer__logo" title="LMC s.r.o."><img src="images/lmc.png" class="e-full--palm"/></a>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/emerald.js"></script>
-    </body>
+    <script src="{{ site.baseurl }}/bower_components/emerald/js/emerald.js"></script>
+</body>
 </html>
