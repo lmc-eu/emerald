@@ -2,5 +2,10 @@ _site
 node_modules
 vendor
 .bundle
+
 bower_components/emerald/*
 !bower_components/emerald/css
+!bower_components/emerald/js
+
+bower_components/walkway.js/*
+!bower_components/walkway.js/walkway.min.js

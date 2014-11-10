@@ -1,2 +1,79 @@
+/* http://coolors.co/1cd8d2-93edc7-50a79b-544761-ffffff */
 body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #222927;
 }
+
+a {
+    text-decoration: none;
+    color: #50A79B;
+}
+    a:hover {
+        border-bottom: 1px solid #3F5A6C;
+        color: #544761;
+    }
+
+.logo {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-family: 'Poiret One', sans-serif;
+}
+
+.header {
+    margin-bottom: 150px;
+    padding-top: 1em;
+    color: #ffffff;
+
+    background: #ebfaf6;
+    background: -webkit-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+    background: -moz-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+    background: -ms-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+    background: -o-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+    background: linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%);
+}
+
+.browser {
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.menu {
+    text-align: right;
+}
+    .menu__item {
+        display: inline-block;
+        margin-left: 1.5em;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+        .menu__item:hover {
+            border: none;
+        }
+
+.hero {
+    font-size: 1.8em;
+    margin: 1.4em 0 0 0;
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: normal;
+}
+
+.footer {
+    margin-top: 150px;
+    padding: 300px 0 150px;
+    font-size: 0.7em;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+
+    border-image: -webkit-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
+    border-image: -moz-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
+    border-image: -ms-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
+    border-image: -o-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
+    border-image: linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
+}
+    .footer__logo:hover {
+        border: none;
+    }
