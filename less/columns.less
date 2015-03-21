@@ -55,7 +55,7 @@
 }
 
 //
-// Interface for easier and more logical adding grid item classes.
+// Interface for easier and more logical grid item classes adding.
 // This - right down here - is the meat of this grid system.
 // --------------------------------------------------------------------------
 .addColumns (@grid-size) {
@@ -66,7 +66,7 @@
     @gutter-width: extract(@grid-size, 3);
     @modifier: extract(@grid-size, 4);
 
-    // Calcute the width of the wrapper
+    // Calculate the width of the wrapper
     .wrapper {
         width: (@columns-count * (@column-width + @gutter-width));
     }
@@ -80,7 +80,7 @@
 }
 
 // 
-// Updating, similary to adding, is just an interface to .buildColumns().
+// Updating, similarly to adding, is just an interface to .buildColumns().
 // It generates classes to overwrite previously defined in the @grid-from,
 // from which it takes the number of columns and the modifier, with widths
 // of column and gutter defined in the @grid-to.

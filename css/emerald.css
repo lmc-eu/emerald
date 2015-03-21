@@ -1,4 +1,62 @@
-/*! Emerald v1.1.3 | MIT Licence | git.io/g9_ZaA */
+/*! Emerald v1.2.2 | MIT Licence | git.io/g9_ZaA */
+.visible--palm {
+  display: block;
+}
+.visible--lap {
+  display: none;
+}
+.visible--desk {
+  display: none;
+}
+.hidden--palm {
+  display: none;
+}
+.hidden--lap {
+  display: block;
+}
+.hidden--desk {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .visible--palm {
+    display: none;
+  }
+  .visible--lap {
+    display: block;
+  }
+  .visible--desk {
+    display: none;
+  }
+  .hidden--palm {
+    display: block;
+  }
+  .hidden--lap {
+    display: none;
+  }
+  .hidden--desk {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  .visible--palm {
+    display: none;
+  }
+  .visible--lap {
+    display: none;
+  }
+  .visible--desk {
+    display: block;
+  }
+  .hidden--palm {
+    display: block;
+  }
+  .hidden--lap {
+    display: block;
+  }
+  .hidden--desk {
+    display: none;
+  }
+}
 .wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -30,9 +88,11 @@
   margin-left: -3vw;
 }
 .grid__item {
-  display: inline-block;
   padding-right: 3vw;
   padding-left: 3vw;
+}
+.grid__item {
+  display: inline-block;
 }
 .wrapper {
   padding-right: 3vw;
@@ -155,9 +215,11 @@
     margin-left: -10px;
   }
   .grid__item {
-    display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .grid__item {
+    display: inline-block;
   }
   .wrapper {
     padding-right: 10px;
@@ -429,6 +491,9 @@
   }
 }
 @media only screen and (min-width: 1020px) {
+  .grid__item {
+    display: inline-block;
+  }
   .wrapper {
     width: 1000px;
   }
@@ -694,64 +759,6 @@
     vertical-align: bottom;
   }
 }
-.visible--palm {
-  display: block;
-}
-.visible--lap {
-  display: none;
-}
-.visible--desk {
-  display: none;
-}
-.hidden--palm {
-  display: none;
-}
-.hidden--lap {
-  display: block;
-}
-.hidden--desk {
-  display: block;
-}
-@media only screen and (min-width: 768px) {
-  .visible--palm {
-    display: none;
-  }
-  .visible--lap {
-    display: block;
-  }
-  .visible--desk {
-    display: none;
-  }
-  .hidden--palm {
-    display: block;
-  }
-  .hidden--lap {
-    display: none;
-  }
-  .hidden--desk {
-    display: block;
-  }
-}
-@media only screen and (min-width: 1020px) {
-  .visible--palm {
-    display: none;
-  }
-  .visible--lap {
-    display: none;
-  }
-  .visible--desk {
-    display: block;
-  }
-  .hidden--palm {
-    display: block;
-  }
-  .hidden--lap {
-    display: block;
-  }
-  .hidden--desk {
-    display: none;
-  }
-}
 .visible--print {
   display: none;
 }
@@ -761,9 +768,11 @@
     margin-left: 0;
   }
   .grid__item {
-    display: inline-block;
     padding-right: 0;
     padding-left: 0;
+  }
+  .grid__item {
+    display: inline-block;
   }
   .wrapper {
     padding-right: 0;
