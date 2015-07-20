@@ -7,7 +7,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     color: #222927;
-    text-align: center;
 }
 
 a {
@@ -25,8 +24,7 @@ a {
 }
 
 .header {
-    margin-bottom: 150px;
-    padding: 130px 0 130px 0;
+    padding: 1.5em 8%;
     color: #ffffff;
 
     background: #ebfaf6;
@@ -39,15 +37,14 @@ a {
 
 .hero {
     font-size: 2em;
-    margin: 2.5em 0 1.5em;
+    margin: .5em 0 1em;
     font-weight: normal;
 }
 
 .menu {
 }
     .menu__item {
-        display: inline-block;
-        margin-left: 1.5em;
+        display: block;
         color: #ffffff;
     }
         .menu__item:hover {
@@ -57,12 +54,18 @@ a {
 .content {
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 8%;
     text-align: left;
 }
+    .content__action {
+        margin-top: 2em;
+        text-align: center;
+    }
 
 .button {
+    display: block;
     border: none;
-    padding: 8px 25px 10px;
+    padding: .4em 1.25em .5em;
     background: #50A79B;
     border: 1px solid #50A79B;
     color: #ffffff;
@@ -73,10 +76,10 @@ a {
     }
 
 .footer {
-    margin-top: 150px;
-    padding: 20px 0 50px;
+    margin-top: 5em;
+    padding: 1em 8% 3em;
     font-size: 0.7em;
-    border-width: 2px 0px 0px 0px;
+    border-width: 2px 0 0 0;
     border-style: solid;
 
     border-image: -webkit-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
@@ -85,6 +88,47 @@ a {
     border-image: -o-linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
     border-image: linear-gradient(115deg, #1CD8D2 10%, #93EDC7 90%) 100% 1;
 }
-    .footer__logo:hover {
-        border: none;
+    .footer__logo {
+        display: block;
+        text-align: center;
     }
+        .footer__logo:hover {
+            border: none;
+        }
+
+@media only screen and (min-width: 500px) {
+    body {
+        text-align: center;
+    }
+
+    .header {
+        margin-bottom: 150px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    .hero {
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .menu {
+    }
+        .menu__item {
+            display: inline-block;
+            margin: 0 .8em;
+        }
+
+    .button {
+        display: inline-block;
+    }
+
+    .footer {
+        margin-top: 150px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+        .footer__logo {
+            display: inline-block;
+        }
+}
