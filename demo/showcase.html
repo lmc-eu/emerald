@@ -10,54 +10,63 @@
             margin: 0;
             padding: 0;
         }
+        .showcase {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
         .demo {
             background: #9c7d22;
+            opacity: .4;
             height: 100vh;
         }
-            .demo--lap {
+            .demo--alt {
                 background: #229c7d;
             }
-            .demo--desk {
+            .demo--alt2 {
                 background: #7d229c;
             }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="grid"><!--
-            Always visible columns
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
-            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+    <div class="showcase">
+        <div class="wrapper">
+            <div class="grid"><!--
+                Always visible columns
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+                --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
 
-            Columns visible on tablet and desktop
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
-            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+                Columns visible on tablet and desktop
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
+                --><div class="grid__item e-0--palm e-1"><div class="demo demo--alt"></div></div><!--
 
-            Columns visible only on desktop
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
-        --></div>
+                Columns visible only on desktop
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+                --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--alt2"></div></div><!--
+            --></div>
+        </div>
     </div>
-
 <script src="lib/emerald/js/emerald.js"></script>
 </body>
 </html>
