@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emerald grid showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/emerald/css/emerald.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .demo {
+            background: #9c7d22;
+            height: 100vh;
+        }
+            .demo--lap {
+                background: #229c7d;
+            }
+            .demo--desk {
+                background: #7d229c;
+            }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid"><!--
+            Always visible columns
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+            --><div class="grid__item e-1--palm"><div class="demo"></div></div><!--
+
+            Columns visible on tablet and desktop
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+            --><div class="grid__item e-0--palm e-1"><div class="demo demo--lap"></div></div><!--
+
+            Columns visible only on desktop
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+            --><div class="grid__item e-0--palm e-0 e-1--desk"><div class="demo demo--desk"></div></div><!--
+        --></div>
+    </div>
+
+<script src="lib/emerald/js/emerald.js"></script>
+</body>
+</html>
