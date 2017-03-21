@@ -65,6 +65,8 @@
   box-sizing: border-box;
 }
 .grid {
+  font-size: 0;
+  line-height: 1;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -72,6 +74,9 @@
 .grid__item {
   display: inline-block;
   width: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: left;
   vertical-align: top;
   direction: ltr;
